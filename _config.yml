@@ -3,3 +3,7 @@ description: A site to commit classwork.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
+
+classwork:
+  zip_url: docs/last/last.zip
+  raw_url: docs/raw/
