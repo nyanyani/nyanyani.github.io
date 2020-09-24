@@ -5,5 +5,5 @@ google_analytics:
 theme: jekyll-theme-cayman
 
 classwork:
-  zip_url: docs/last/last.zip
-  raw_url: docs/raw/
+  zip_url: tree/main/docs/last/last.zip
+  raw_url: tree/main/docs/raw/
