@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-#Timeline
-|No.  |Commit time|File    |Content  |
-|:---:|:---------:|:------:|:-------:|
+# Timeline
+|No.  |Commit time|File                 |Content                   |
+|:----|:----------|:--------------------|:-------------------------|
 | 1   |2020-09-25 |[CSS-Zen-Gargen-copy]|Html code typing exercise.|
 
 [CSS-Zen-Gargen-copy]:https://nyanyani.github.io/miao/zen-garden-copy.html
