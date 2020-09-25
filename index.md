@@ -7,7 +7,7 @@ layout: default
 | 1   |2020-09-25 |[CSS-Zen-Gargen-copy]|Html code typing exercise.|
 
 [CSS-Zen-Gargen-copy]:https://nyanyani.github.io/miao/zen-garden-copy.html
-<!-- 
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
@@ -126,4 +126,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 ```
 The final element.
-``` -->
+``` 
