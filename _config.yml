@@ -5,5 +5,5 @@ google_analytics:
 theme: jekyll-theme-cayman
 
 classwork:
-  zip_url: docs/last/last.zip
-  raw_url: docs/raw/
+  zip_url: https://nyanyani.github.io/docs/last/last.zip
+  raw_url: https://nyanyani.github.io/docs/raw/
