@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML basic</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="h1">Lorem.</h1>
+  </header>
+
+  <main>
+    <article>
+      <section>
+        <hgroup>
+          <h2>Lorem ipsum.</h2>
+          <h3>Lorem ipsum dolor.</h3>
+        </hgroup>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, laudantium doloribus voluptatum quia cumque
+          nemo quam nobis debitis rerum neque eligendi reiciendis illum. Quod eum libero quia, saepe porro quae?</p>
+        <p>lorem ipsum dolor sit amet consectetur adipisicing elit. quisquam obcaecati vel, illo, magnam et possimus
+          aperiam id ipsam est architecto adipisci, incidunt iste perspiciatis. recusandae, laborum? beatae enim
+          mollitia suscipit.</p>
+        <a href="//jd.com" target="_blank" rel="noopener noreferrer">Open jd.com in new tag.</a>
+        <a href="mailto:" target="_blank" rel="noopener noreferrer">Mail to me.</a>
+        <a href="#bottom">Jump to the bottom.</a>
+        <a href="/docs/last/last.zip" rel="download">Click to download.</a>
+        <br />
+        <img src="/docs/vim-shortcut.png" height="400" title="Vim shortcut" alt="vim cheat sheet" />
+        <hr />
+        <hr />
+      </section>
+
+      <section>
+        <marquee behavior="" direction="">Marquee tag</marquee>
+        <p>The difference between <em>this</em>, <strong>this</strong> and <b>this</b>.</p>
+        <p>The difference between <u>this</u> and <i>this</i>.</p>
+        <p>&lt;!-- This line shows html comments. --&gt;</p>
+        <p>The proper way to show javascript code:</p>
+        <pre><code>
+        function a(){
+          return 1
+        }
+        </code></pre>
+        <hr />
+      </section>
+
+      <section>
+        <ul>
+          <li>FOO
+            <ol>
+              <li>foobar
+                <ol>
+                  <li>foo</li>
+                  <li>bar</li>
+                </ol>
+              </li>
+              <li>barbaz</li>
+              <li>foobarbaz</li>
+            </ol>
+          </li>
+          <li>BAR</li>
+          <li>FOOBAR</li>
+        </ul>
+        <hr />
+      </section>
+
+      <section>
+        <dl>
+          <dt>foo</dt>
+          <dd>bar</dd>
+          <dt>bar</dt>
+          <dd>barz</dd>
+          <dd>barbaz</dd>
+          <dd>foobarbaz</dd>
+          <dt>FOO</dt>
+          <dd>BAR</dd>
+          <dd>FOOBAR</dd>
+        </dl>
+        <hr />
+      </section>
+
+      <section>
+        <h3>Duckduckgo search</h3>
+        <form action="https://duckduckgo.com" target="_blank" required>
+          <input type="text" name="q" id="search-box" placeholder="Enter here...">
+          <input type="submit" title="Duck it!" value="Search">
+        </form>
+        <hr />
+      </section>
+
+      <section>
+        <h3>Info table</h3>
+        <form action="">
+          <dl>
+            <dt>Gender:</dt>
+            <dd>
+              <label for="gender-m"><input type="radio" name="gender" id="gender-m" value="Male"> Male</label>
+              <label for="gender-fm"><input type="radio" name="gender" id="gender-fm" value="Female"> Female</label>
+
+            </dd>
+            <dt>Age:</dt>
+            <dd>
+              <select name="age" id="age">
+                <option value="" hidden selected>Select here...</option>
+                <optgroup label="child">
+                  <option value="1-6">1-6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;years</option>
+                  <option value="6-12">6-12&nbsp;&nbsp;&nbsp;years</option>
+                </optgroup>
+                <optgroup label="teen">
+                  <option value="12-15">12-15 years</option>
+                  <option value="15-18">15-18 years</option>
+                </optgroup>
+                <optgroup label="adult">
+                  <option value="18-23">18-23 years</option>
+                  <option value="23- ">23-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;years</option>
+                </optgroup>
+              </select>
+            </dd>
+            <dt>Birthday:</dt>
+            <dd><input type="date" name="birthday" id="birthday"></dd>
+            <dt>Birth-time:</dt>
+            <dd><input type="time" name="birth-time" id="birth-time"></dd>
+            <dt>Selfie:</dt>
+            <dd>
+              <label for="selfie-file">
+                <input type="file" name="selfie-file" id="selfie-file" hidden>
+                Click here to upload your selfie.
+              </label>
+            </dd>
+            <dt>Skin-color:</dt>
+            <dd><input type="color" name="skin-color" id="skin-color"></dd>
+            <dt>Resume</dt>
+            <dd><textarea name="text-area" id="text-area" cols="30" rows="10">&lt;/textarea></textarea></dd>
+          </dl>
+          <fieldset disabled="disabled">
+            <legend>Disabled fieldset...</legend>
+            <label for="fieldset-radio"><input type="radio" id="fieldset-radio" checked>You</label>
+            <label for="fieldset-checkbox"><input type="checkbox" id="fieldset-checkbox">cannot</label>
+            <input type="text" placeholder="type or">
+            <select multiple>
+              <option>change</option>
+              <option selected>anything</option>
+            </select>
+            <button>here.</button>
+          </fieldset>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+        <hr />
+      </section>
+
+      <section>
+        <table border="1">
+          <caption>Table Title</caption>
+          <colgroup>
+            <col bgcolor="red" width="150">
+            <col bgcolor="green" width="150">
+            <col bgcolor="purple" width="150">
+          </colgroup>
+          <thead>
+            <tr bgcolor="orange">
+              <th id="table-header-1">Table</th>
+              <th id="table-header-2">Header</th>
+              <th>3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td rowspan="2">Item1</td>
+              <td>col3</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Item2</td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>Item3</td>
+              <td headers="table-header-1 table-header-2">col3</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr bgcolor="carbon">
+              <th>Table</th>
+              <th>Footer</th>
+              <th>3</th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section>
+        <img src="/docs/owl.jpg" width="300" alt="Owlowlowl..." title="Gugugu..." usemap="#owl">
+        <map name="owl">
+          <area shape="circle" coords="91,143,40" href="#bottom" title="Jump to bottom..." alt="Owl">
+          <area shape="circle" coords="165,143,40" href="#bottom" title="Jump to bottom..." alt="Owl">
+          <area shape="poly"
+            coords="56,78,96,87,176,89,202,64,204,119,214,163,212,161,206,191,236,263,272,243,280,259,258,279,282,279,282,299,216,307,204,355,178,403,120,395,100,355,40,345,40,303,4,275,36,241,52,194,43,145,62,105  "
+            href="/" target="id-iframe" title="Jump to index in the frame..." alt="Owl">
+          <area shape="rect" coords="0,0,312,468" href="#h1" title="Jump to top..." alt="Owl">
+        </map>
+        <hr />
+      </section>
+
+      <section>
+        <a href="2020-09-25/zen-garden-copy.html" target="id-iframe">Click to show CSS-zen-garden code copy page.</a>
+        <br />
+        <iframe src="/index.md" name="id-iframe" width="1000" height="250" frameborder="1">
+          No thing to be done here.
+        </iframe>
+        <hr />
+      </section>
+    </article>
+
+    <footer id="bottom">
+      <p>Page edited by &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt; <a href="/"
+          title="Github pages">Nyanyani</a>&gt;</p>
+    </footer>
+  </main>
+</body>
+
+</html>
