@@ -8,6 +8,10 @@ layout: default
 2. 2020-09-29
   - [HTML-basic](https://nyanyani.github.io/miao/2020-09-29/html-basic.html)
   > `form`, `label`, `table` and etc elements' usage practice
+3. 2020-10-06
+  - [CSS-basic](https://nyanyani.github.io/miao/2020-10-06/css-selector-practise.html)
+  > `css selectors` usage practice
+  
 
 <!-- Text can be **bold**, _italic_, or ~~strikethrough~~.
 
