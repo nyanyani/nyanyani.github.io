@@ -8,3 +8,6 @@
 3. 2020-10-06
   - [CSS-basic](https://nyanyani.github.io/miao/2020-10-06/css-selector-practise.html)
   > `css selectors` usage practice
+4. 2020-10-08
+  - [CSS-basic](https://nyanyani.github.io/miao/2020-10-08/block-basic.html)
+  > `model box` basic visual format

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* initialize model box to border-box */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 20px;
+    }
+
+    header {
+      background-color: #789;
+      margin-top: 20px;
+      white-space: nowrap;
+      color: white;
+    }
+    /* align using inline-block property */
+    .inline-block-test {
+      margin: 0;
+      padding: 0 calc(50% - 215px);
+    }
+
+    .inline-block-test *{
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .inline-block-test h1 {
+      font-size: 1em;
+      font-weight: 400;
+    }
+
+    .inline-block-test nav {
+      width: 20em;
+    }
+    /* algin using margin property */
+    h2 {
+      font-size: 1em;
+      font-weight: 900;
+      text-transform: capitalize;
+      width: 25em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    main {
+      border: 2px solid black;
+      padding: 0 10px;
+      max-width: 600px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+    /* y axis text scroll*/
+    article p {
+      height: 3em;
+      overflow: auto;
+    }
+
+    .horizon-rule {
+      background-color: silver;
+      text-align: center;
+      padding: 1em 0;
+      color: rgb(85, 69, 69);
+    }
+    /* animate using negative margin */
+    .horizon-rule:hover {
+      margin: 0 -10px;
+    }
+    /* create triangle using border property */
+    .triangle-border {
+      text-indent: -99999px;
+      height: 60px;
+      width: 60px;
+      border: 60px solid transparent;
+      border-bottom-color: indigo;
+      margin: auto;
+    }
+
+    footer {
+      margin-top: -60px;
+    }
+  </style>
+  <title>Block-basic</title>
+</head>
+
+<body>
+  <header>
+    <div class="inline-block-test">
+      <h1>Basic visual format</h1>
+      <nav>and here is an inline-block navigation</nav>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+      <h2>article with border and adjustable center align</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi amet enim animi voluptatum numquam, doloribus
+        perspiciatis nihil dolores consequuntur. Officia aut aperiam voluptatum in dolorum voluptatibus soluta alias
+        repellendus iusto?</p>
+      <div class="horizon-rule">horizon rule with hover style</div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In molestiae mollitia enim autem, magni laboriosam,
+        accusantium eligendi quod est facilis, aliquid dolor repellendus iusto veniam quidem sunt dolorem voluptas
+        earum.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="triangle-border">a triangle draw by css border</div>
+  </footer>
+</body>
+
+</html>
