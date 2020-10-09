@@ -11,3 +11,6 @@
 4. 2020-10-08
   - [Box-basic](https://nyanyani.github.io/miao/2020-10-08/block-basic.html)
   > `model box` basic visual format
+5. 2020-10-09
+  - [CSS-block-basic](https://nyanyani.github.io/miao/2020-10-09/css-block-layout.html)
+  > `block` and `inline-block` basic layout

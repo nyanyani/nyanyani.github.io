@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    header {
+      background-color: #000;
+      min-width: 600px;
+      margin-bottom: 16px;
+    }
+
+    nav {
+      width: 600px;
+      margin: auto;
+      color: #fff;
+    }
+
+    main {
+      width: 600px;
+      margin: auto;
+    }
+
+    .block-style ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .block-style li {
+      width: 180px;
+      height: 40px;
+      background-color: lightblue;
+      border: 3px solid #000;
+      margin: 15px 0;
+      line-height: 34px;
+    }
+
+    .block-style li:hover {
+      background-color: #f00;
+    }
+
+    .block-style li:nth-child(n + 5) {
+      margin-left: 210px;
+    }
+
+    .block-style li:nth-child(n + 9) {
+      margin-left: 420px;
+    }
+
+    .block-style li:nth-child(5) {
+      margin-top: -220px;
+    }
+
+    .block-style li:nth-child(9) {
+      margin-top: -220px;
+    }
+
+    .inline-block-style {
+      font-size: 0;
+    }
+
+    .inline-block-style span {
+      display: inline-block;
+      font-size: initial;
+      width: 180px;
+      height: 40px;
+      line-height: 34px;
+      text-align: center;
+      margin-bottom: 15px;
+      background-color: lightgreen;
+      border: 3px solid #000;
+    }
+
+    .inline-block-style span:nth-child(3n + 2) {
+      margin-left: 30px;
+    }
+
+    .inline-block-style span:nth-child(3n + 3) {
+      margin-left: 30px;
+    }
+
+    .inline-block-style span:hover {
+      background-color: gray;
+    }
+
+    aside li::marker {
+      content: "";
+    }
+
+    aside ul {
+      padding: 0;
+    }
+
+    aside li {
+      border-bottom: 1px dashed #000;
+    }
+    
+    footer {
+      margin: 0;
+      min-width: 600px;
+      /* padding: 0 calc(50vw - 50px); */
+      background-color:palevioletred;
+    }
+    .footer-bg {
+      /* width: 100px; */
+      margin: 0;
+      height: 40px;
+      line-height: 20px;
+      text-align: center;
+      color: #fff;
+    }
+  </style>
+  <title>css-block-layout</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      Title 600px width with left align using margin auto
+    </nav>
+  </header>
+  <main>
+    <section class="main-article">
+      <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+        宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+        页面主体 宽度600px</p>
+    </section>
+    <h1>Block list</h1>
+    <section class="block-style">
+      <ul>
+        <li>宽180高40(包含边框)</li>
+        <li>水平间隙30px</li>
+        <li>垂直间隙15px</li>
+        <li>边框宽度3px</li>
+        <li>Item01</li>
+        <li>Item02</li>
+        <li>Item03</li>
+        <li>Item04</li>
+        <li>Item05</li>
+        <li>Item06</li>
+        <li>Item07</li>
+        <li>Item08</li>
+      </ul>
+    </section>
+    <h1>Inline-block list</h1>
+    <section class="inline-block-style">
+      <span>宽180高40(包含边框)</span>
+      <span>Item01</span>
+      <span>Item02</span>
+      <span>水平间隙30px</span>
+      <span>Item03</span>
+      <span>Item04</span>
+      <span>垂直间隙15px</span>
+      <span>Item05</span>
+      <span>Item06</span>
+      <span>边框宽度3px</span>
+      <span>Item07</span>
+      <span>Item08</span>
+    </section>
+    <aside>
+      <ul>
+        <li>Link01</li>
+        <li>Link02</li>
+        <li>Link03</li>
+        <li>Link04</li>
+        <li>Link05</li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <div class="footer-bg">Footer<br>center align</div>
+  </footer>
+</body>
+
+</html>
