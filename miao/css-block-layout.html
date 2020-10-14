@@ -15,6 +15,7 @@
 
     body {
       margin: 0;
+      xoverflow: hidden;
     }
 
     header {
@@ -38,7 +39,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      text-align: center;
     }
 
     .block-style li {
@@ -47,6 +47,7 @@
       background-color: lightblue;
       border: 3px solid #000;
       margin: 15px 0;
+      text-align: center;
       line-height: 34px;
     }
 
@@ -62,19 +63,16 @@
       margin-left: 420px;
     }
 
-    .block-style li:nth-child(5) {
+    .block-style li:nth-child(4n + 5) {
       margin-top: -220px;
     }
 
-    .block-style li:nth-child(9) {
-      margin-top: -220px;
-    }
-
-    .inline-block-style {
+    .inline-block-style ul {
       font-size: 0;
+      padding: 0;
     }
 
-    .inline-block-style span {
+    .inline-block-style li {
       display: inline-block;
       font-size: initial;
       width: 180px;
@@ -84,38 +82,73 @@
       margin-bottom: 15px;
       background-color: lightgreen;
       border: 3px solid #000;
+      /* text-align: justify; 
+      text-align-last: justify;
+      */
+      /* word-spacing: -5px; */
+      /* <li> without close tag, not recommend */
     }
 
-    .inline-block-style span:nth-child(3n + 2) {
+    .inline-block-style ul {
+      margin: -15px;
+      overflow: hidden;
+    }
+    .inline-block-style li {
+      margin: 8px 15px;
+    }
+
+    /* 
+    .inline-block-style li:nth-child(3n + 2) {
+      margin-left: 30px;
+    }
+    
+    .inline-block-style li:nth-child(3n + 3) {
       margin-left: 30px;
     }
 
-    .inline-block-style span:nth-child(3n + 3) {
-      margin-left: 30px;
+    .inline-block-style li:nth-last-child(-n + 3) {
+      margin-bottom: 0;
     }
+    */
 
-    .inline-block-style span:hover {
+    .inline-block-style li:hover {
       background-color: gray;
-    }
+    } 
+
+
 
     aside li::marker {
       content: "";
     }
-
+    /* 
+    aside li {
+      list-style-type: none;
+    }
+     */
     aside ul {
       padding: 0;
+      /*  hide last element's bottom border 
+      father-element {
+      overflow: hidden;
+      }
+      father-element contains child's margin-box instead of border-box
+      child-element {
+        margin-bottom: -1px;
+      }
+      */
     }
 
-    aside li {
+    aside li:not(:last-child) {
       border-bottom: 1px dashed #000;
     }
-    
+
     footer {
       margin: 0;
       min-width: 600px;
       /* padding: 0 calc(50vw - 50px); */
-      background-color:palevioletred;
+      background-color: palevioletred;
     }
+
     .footer-bg {
       /* width: 100px; */
       margin: 0;
@@ -159,18 +192,20 @@
     </section>
     <h1>Inline-block list</h1>
     <section class="inline-block-style">
-      <span>宽180高40(包含边框)</span>
-      <span>Item01</span>
-      <span>Item02</span>
-      <span>水平间隙30px</span>
-      <span>Item03</span>
-      <span>Item04</span>
-      <span>垂直间隙15px</span>
-      <span>Item05</span>
-      <span>Item06</span>
-      <span>边框宽度3px</span>
-      <span>Item07</span>
-      <span>Item08</span>
+      <ul>
+        <li>宽180高40(包含边框)</li>
+        <li>Item01</li>
+        <li>Item02</li>
+        <li>水平间隙30px</li>
+        <li>Item03</li>
+        <li>Item04</li>
+        <li>垂直间隙15px</li>
+        <li>Item05</li>
+        <li>Item06</li>
+        <li>边框宽度3px</li>
+        <li>Item07</li>
+        <li>Item08</li>
+      </ul>
     </section>
     <aside>
       <ul>
