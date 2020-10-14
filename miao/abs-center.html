@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../docs/styles/normalize.css">
+  <style>
+    /* || global styles */
+    html {
+      box-sizing: border-box;
+    }
+    
+    * {
+      box-sizing: inherit;
+      xbox-shadow: 0 0 1px red;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0px;
+      background-color:lightyellow;
+    }
+
+    p {
+      margin: 0;
+      padding-left: 0 50px;
+    }
+
+    header {
+      margin: 0;
+      padding: 0;
+      background-color:tan;
+    }
+    
+    section {
+      margin: 0 20px;
+    }
+    
+    h1 {
+      margin: 0;
+      height: 3em;
+      line-height: 3em;
+      white-space: nowrap;
+      text-align: center;
+    }
+    
+    h2 {
+      margin: 0;
+    }
+    
+    article {
+      height: 200px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #000;
+    }
+
+    /* || specific styles */
+
+    /* 1. Add a no content div */
+    .no1 {
+      border: 1px solid #000;
+    }
+
+    div.set-height {
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      width: 0;
+      font-size: 0;
+    }
+
+    .set-line-height-normal {
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+    }
+
+    /* 2. set father element's font-size to 0 */
+    .no2 {
+      font-size: 0;
+      line-height: 160px;
+    }
+    .init-fontsize {
+      display: inline-block;
+      font-size: initial;
+      line-height: normal;
+      vertical-align: middle;
+    }
+
+    /* 3. set father element's line-height equals to height */
+    .set-line-height {
+      line-height: 200px;
+    }
+
+    /* 4. flex property: 'align-item' */
+    .no4 {
+      display: flex;
+      flex-wrap: column wrap;
+      align-items: center;
+    }
+
+    /* 5. position: absolute*/
+    .no5 {
+      position: relative;
+    }
+    .position-absolute {
+      position: absolute;
+      xheight: 200px;
+      margin: auto;
+      top: 20px;
+      xright: 0;
+      xbottom: 0;
+      left: 0;
+    }
+  </style>
+  <title>Abs center align practice</title>
+</head>
+
+<body>
+  <header>
+    <h1>Different ways to vertical center align elements</h1>
+  </header>
+  <section>
+    <h2>1. add a no content div</h2>
+    <article class="no1">
+      <div class="set-height"></div><span class="set-line-height-normal">Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Iure recusandae aliquid amet earum porro alias repellat enim ipsum! Odit quo optio dolores at
+        deserunt voluptas, eum vero quis facilis officia.</span>
+    </article>
+  </section>
+  <section>
+    <h2>2. set father element's font-size to 0</h2>
+    <article class="no2">
+      <div class="init-fontsize">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatem earum at alias beatae natus expedita
+        tempore quaerat magnam inventore iste nam quasi, sapiente voluptatibus repellat asperiores ad cumque labore?
+      </div>
+    </article>
+  </section>
+  <section>
+    <h2>3. set father element's line-height equals to height</h2>
+    <article class="no3">
+      <div class="set-line-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque natus, dolorum ea dicta doloremque, et quo voluptatibus iusto itaque sit dolores doloribus corporis consequatur ratione minus necessitatibus architecto porro provident.
+      </div>
+    </article>
+  </section>
+  <section>
+    <h2>4. flex property: 'align-item'</h2>
+    <article class="no4">
+      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusamus cum, ab vero veritatis aut aspernatur maxime assumenda dolore quisquam quas. Sapiente distinctio culpa velit quaerat illo, quibusdam accusantium porro!</div>
+    </article>
+  </section>
+  <section>
+    <h2>5. position: absolute</h2>
+    <article class="no5">
+      <div class="position-absolute">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maiores deserunt, nobis consequuntur, architecto accusamus natus, sit excepturi voluptates id suscipit odit nostrum possimus. Corrupti molestiae quibusdam delectus quisquam beatae.</div>
+    </article>
+  </section>
+  <section>
+    <h2>6. </h2>
+    <article>
+      <div></div>
+    </article>
+  </section>
+</body>
+
+</html>
