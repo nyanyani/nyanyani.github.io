@@ -90,8 +90,14 @@
     }
 
     /* 3. set father element's line-height equals to height */
-    .set-line-height {
-      line-height: 200px;
+    .no3 {
+      line-height: 160px;
+    }
+    .set-line-height  {
+      display: inline-block;
+      line-height: initial;
+      width: 100%;
+      vertical-align: middle;
     }
 
     /* 4. flex property: 'align-item' */
@@ -107,12 +113,12 @@
     }
     .position-absolute {
       position: absolute;
-      xheight: 200px;
+      height: 60px;
+      width: calc(100% - 40px);
       margin: auto;
-      top: 20px;
-      xright: 0;
-      xbottom: 0;
-      left: 0;
+      top: 0;
+      bottom: 0;
+      overflow: auto;
     }
   </style>
   <title>Abs center align practice</title>
