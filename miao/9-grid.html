@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* global style */
+    html {
+      box-sizing: border-box;
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    main {
+      display: flex;
+      flex-flow: row wrap;
+      height: 100%;
+      justify-items: center;
+    }
+    .init-9grid {
+      width: 220px;
+      padding: 25px;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    .grid {
+      background-color: #eee;
+      width: 50px;
+      padding: 0;
+      cursor: pointer;
+      font-size: initial;
+      line-height: 50px;
+      text-align: center;
+      xoutline: 5px solid #000;
+    }
+    /* grid layout */
+    .grid-wrapper .grid:hover {
+      background-color: gold;
+      outline: 5px solid #f0f;
+      z-index: 200;
+    }
+
+    caption,
+    .grid-header {
+      display: block;
+      font-size: 25px;
+      height: 30px;
+      line-height: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* || display: grid; */
+    .grid-wrapper {
+      display: grid;
+      width: 160px;
+      grid-template-columns: repeat(3, 50px);
+      grid-template-rows: repeat(3, 50px);
+      background-color: #000;
+      grid-gap: 5px;
+      outline: 5px solid #000;
+      margin-left: 5px;
+    }
+
+    /* || flex layout */
+    .init-9grid.flex-layout {
+      width: 240px;
+    }
+    .flex-wrapper {
+      box-sizing: initial;
+      display: flex;
+      width: 170px;
+      flex-flow: row wrap;
+      border-width: 5px 0 0 5px;
+      border-style: solid;
+      border-color:black;
+    }
+    .flex-wrapper .grid {
+      position: relative;
+      flex: 1 50px;
+      height: 50px;
+      border-width: 0 5px 5px 0;
+      border-style: solid;
+      border-color:black;
+    }
+    .flex-wrapper .grid:hover {
+      background-color: gold;
+      xoutline: 5px solid #f0f;
+      border-color: #f0f;
+      z-index: 500;
+    }
+
+    /* || display:inline-block */
+    .inlineblock-wrapper {
+      font-size: 0;
+      vertical-align: top;
+    }
+    
+    .inlineblock-wrapper .grid {
+      display: inline-block; 
+      margin: 5px 0 0 5px;
+      outline: 5px solid #000;
+      xborder: 5px solid #000;
+    }
+    .inlineblock-wrapper .grid:hover {
+      position: relative;
+      background-color: gold;
+      outline: 5px solid #f0f;
+      xborder-color: #f0f;
+      z-index: 500;
+    }
+
+    /* || list position layout */
+    .list-wrapper {
+      box-sizing: initial;
+    }
+    .list-wrapper ul {
+      display: inline-block;
+      position: relative;
+      margin-top: 2.5px;
+      padding: 0;
+      width: 165px;
+      font-size: 0;
+    }
+    .list-wrapper li{
+      display: inline-block;
+      position: relative;
+      list-style-type: none;
+      margin: -2.5px;
+      border: 5px solid #000;
+    }
+    .list-wrapper li:hover {
+      border-color: #f0f;
+      background-color: gold;
+      z-index: 600;
+    }
+
+    /* html table set border-style*/
+    table,
+    .table-wrapper {
+      box-sizing: initial;
+      border-collapse: collapse;
+    }
+    caption {
+      display: table-caption;
+    }
+    td,
+    .table-cell {
+      border: 5px inset #000;
+    }
+    td:hover,
+    .table-cell:hover {
+      border-style: solid;
+      border-color: #f0f;
+      background-color: gold;
+    }
+    
+    /* || display: table; */
+    .table-wrapper {
+      box-sizing: initial;
+      display: table;
+    }
+
+    .table-row {
+      display: table-row;
+    }
+
+    .table-cell {
+      display: table-cell;
+      width: 50px;
+      height: 50px;
+    }
+
+  </style>
+  <title>9-grid hover</title>
+</head>
+
+<body>
+  <main>
+    <div class="init-9grid">
+      <div class="grid-header">grid layout</div>
+      <div class="grid-wrapper">
+        <div class="grid"><span>R1C1</span></div>
+        <div class="grid"><span>R1C2</span></div>
+        <div class="grid"><span>R1C3</span></div>
+
+        <div class="grid"><span>R2C1</span></div>
+        <div class="grid"><span>R2C2</span></div>
+        <div class="grid"><span>R2C3</span></div>
+
+        <div class="grid"><span>R3C1</span></div>
+        <div class="grid"><span>R3C2</span></div>
+        <div class="grid"><span>R3C3</span></div>
+      </div>
+    </div>
+    <div class="init-9grid flex-layout">
+      <div class="grid-header">flex layout</div>
+      <div class="flex-wrapper">
+        <div class="grid"><span>R1C1</span></div>
+        <div class="grid"><span>R1C2</span></div>
+        <div class="grid"><span>R1C3</span></div>
+
+        <div class="grid"><span>R2C1</span></div>
+        <div class="grid"><span>R2C2</span></div>
+        <div class="grid"><span>R2C3</span></div>
+
+        <div class="grid"><span>R3C1</span></div>
+        <div class="grid"><span>R3C2</span></div>
+        <div class="grid"><span>R3C3</span></div>
+      </div>
+    </div>
+    <div class="init-9grid">
+      <div class="grid-header">css table</div>
+      <div class="table-wrapper">
+        <div class="table-body">
+          <div class="table-row">
+            <div class="grid table-cell"><span>R1C1</span></div>
+            <div class="grid table-cell"><span>R1C2</span></div>
+            <div class="grid table-cell"><span>R1C3</span></div>
+          </div>
+          <div class="table-row">
+            <div class="grid table-cell"><span>R2C1</span></div>
+            <div class="grid table-cell"><span>R2C2</span></div>
+            <div class="grid table-cell"><span>R2C3</span></div>
+          </div>
+          <div class="table-row">
+            <div class="grid table-cell"><span>R3C1</span></div>
+            <div class="grid table-cell"><span>R3C2</span></div>
+            <div class="grid table-cell"><span>R3C3</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="init-9grid">
+      <div class="grid-header">inline-block</div>
+      <div class="inlineblock-wrapper">
+        <div class="grid"><span>R1C1</span></div>
+        <div class="grid"><span>R1C2</span></div>
+        <div class="grid"><span>R1C3</span></div>
+
+        <div class="grid"><span>R2C1</span></div>
+        <div class="grid"><span>R2C2</span></div>
+        <div class="grid"><span>R2C3</span></div>
+
+        <div class="grid"><span>R3C1</span></div>
+        <div class="grid"><span>R3C2</span></div>
+        <div class="grid"><span>R3C3</span></div>
+      </div>
+    </div>
+    <div class="init-9grid">
+      <div class="grid-header">list position </div>
+      <div class="list-wrapper">
+        <ul>
+          <li class="grid">R1C1</li>
+          <li class="grid">R1C2</li>
+          <li class="grid">R1C3</li>
+          <li class="grid">R2C1</li>
+          <li class="grid">R2C2</li>
+          <li class="grid">R2C3</li>
+          <li class="grid">R3C1</li>
+          <li class="grid">R3C2</li>
+          <li class="grid">R3C3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="init-9grid">
+      <table>
+        <caption>html table</caption>
+        <tbody>
+          <tr>
+            <td class="grid">R1C1</td>
+            <td class="grid">R1C2</td>
+            <td class="grid">R1C3</td>
+          </tr>
+          <tr>
+            <td class="grid">R2C1</td>
+            <td class="grid">R2C2</td>
+            <td class="grid">R2C3</td>
+          </tr>
+          <tr>
+            <td class="grid">R3C1</td>
+            <td class="grid">R3C2</td>
+            <td class="grid">R3C3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+
+</html>
