@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../docs/style/normalize.css">
+  <style>
+    /* || init box module */
+    html {
+      box-sizing: border-box;
+      background-color: #eee;
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    /* || global setting */
+    body {
+      position: relative;
+      margin: 0;
+    }
+
+    header {
+      position: relative;
+      height: 60px;
+      border-radius: 1em;
+      background-color: #eee;
+      box-shadow: 1px 1px 2px grey;
+    }
+
+    main {
+      position: relative;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background: none;
+      border: none;
+    }
+
+    /* || img side slider */
+    .img-side-slide {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+
+    .img-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 450px;
+      height: 300px;
+      outline: double;
+      overflow: hidden;
+    }
+
+    img {
+      height: 300px;
+    }
+
+    .img-container input {
+      position: absolute;
+      bottom: 10px;
+      opacity: 0.5;
+      z-index: 690;
+    }
+
+    .img-container input:nth-child(1) {
+      left: 10px;
+    }
+
+    .img-container input:nth-child(2) {
+      left: 24px;
+    }
+
+    .img-container input:nth-child(3) {
+      left: 38px;
+    }
+
+    .img-container input:nth-child(4) {
+      left: 52px;
+    }
+
+    .img-container input:nth-child(5) {
+      left: 66px;
+    }
+
+    .img-side,
+    .img-opacity-list {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0;
+      white-space: nowrap;
+      margin: 0;
+      padding: 0;
+      height: 300px;
+      transition: .6s;
+    }
+
+    .img-side li {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .img-side-slide input:nth-child(2):checked~.img-side {
+      left: -100%;
+    }
+
+    .img-side-slide input:nth-child(3):checked~.img-side {
+      left: -200%;
+    }
+
+    .img-side-slide input:nth-child(4):checked~.img-side {
+      left: -300%;
+    }
+
+    .img-side-slide input:nth-child(5):checked~.img-side {
+      left: -400%;
+    }
+
+    .img-container label {
+      position: absolute;
+      width: 0;
+      text-align: center;
+      line-height: 50px;
+      color: #fff;
+      height: 50px;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      background-color: #0005;
+      z-index: 660;
+    }
+    
+    .img-container:hover label {
+      width: 50px;
+      font-size: 30px;
+      cursor: pointer;
+      transition: width .6s, font-size .2s .1s;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    /* || opacity slide */
+    .img-opacity-slide {
+      position: absolute;
+      top: 100px;
+      left: 720px;
+      transition: .6s;
+    }
+    
+    .img-opacity-list li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 1.4s -0.4s;
+    }
+
+    .img-opacity-slide input:nth-child(1):checked ~ .img-opacity-list li:nth-child(1),
+    .img-opacity-slide input:nth-child(2):checked ~ .img-opacity-list li:nth-child(2),
+    .img-opacity-slide input:nth-child(3):checked ~ .img-opacity-list li:nth-child(3),
+    .img-opacity-slide input:nth-child(4):checked ~ .img-opacity-list li:nth-child(4),
+    .img-opacity-slide input:nth-child(5):checked ~ .img-opacity-list li:nth-child(5)
+     {
+      opacity: 1;
+      z-index: 621;
+    }
+    
+  </style>
+  <title>css sprite practice</title>
+</head>
+
+<body>
+  <main>
+    <section class="img-side-slide">
+      <div class="img-container">
+        <input type="radio" checked name="radio-check1" id="bg-img01">
+        <input type="radio" name="radio-check1" id="bg-img02">
+        <input type="radio" name="radio-check1" id="bg-img03">
+        <input type="radio" name="radio-check1" id="bg-img04">
+        <input type="radio" name="radio-check1" id="bg-img05">
+
+        <ul class="img-side">
+          <li>
+            <img src="../docs/images/bg-img1.jpg" alt="">
+            <label class="prev img-page01" for="bg-img05">&lt;</label>
+            <label class="next img-page01" for="bg-img02">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img2.jpg" alt="">
+            <label class="prev img-page02" for="bg-img01">&lt;</label>
+            <label class="next img-page02" for="bg-img03">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img3.jpg" alt="">
+            <label class="prev img-page03" for="bg-img02">&lt;</label>
+            <label class="next img-page03" for="bg-img04">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img4.jpg" alt="">
+            <label class="prev img-page04" for="bg-img03">&lt;</label>
+            <label class="next img-page04" for="bg-img05">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img5.jpg" alt="">
+            <label class="prev img-page05" for="bg-img04">&lt;</label>
+            <label class="next img-page05" for="bg-img01">&gt;</label>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="img-opacity-slide">
+      <div class="img-container img-opacity">
+        <input type="radio" checked name="radio-check" id="bg-opacity-img01">
+        <input type="radio" name="radio-check" id="bg-opacity-img02">
+        <input type="radio" name="radio-check" id="bg-opacity-img03">
+        <input type="radio" name="radio-check" id="bg-opacity-img04">
+        <input type="radio" name="radio-check" id="bg-opacity-img05">
+        <ul class="img-opacity-list">
+          <li>
+            <img src="../docs/images/bg-img1.jpg" alt="">
+            <label class="prev img-page01" for="bg-opacity-img05">&lt;</label>
+            <label class="next img-page01" for="bg-opacity-img02">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img2.jpg" alt="">
+            <label class="prev img-page02" for="bg-opacity-img01">&lt;</label>
+            <label class="next img-page02" for="bg-opacity-img03">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img3.jpg" alt="">
+            <label class="prev img-page03" for="bg-opacity-img02">&lt;</label>
+            <label class="next img-page03" for="bg-opacity-img04">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img4.jpg" alt="">
+            <label class="prev img-page04" for="bg-opacity-img03">&lt;</label>
+            <label class="next img-page04" for="bg-opacity-img05">&gt;</label>
+          </li>
+          <li>
+            <img src="../docs/images/bg-img5.jpg" alt="">
+            <label class="prev img-page05" for="bg-opacity-img04">&lt;</label>
+            <label class="next img-page05" for="bg-opacity-img01">&gt;</label>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <aside class="left-aside">
+      <div class="nav-left-aside"></div>
+    </aside>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>
