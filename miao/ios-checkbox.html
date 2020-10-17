@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=z, initial-scale=1.0">
+
+  <style>
+    html {
+      zoom: 4;
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    .box-wrapper {
+      position: relative;
+      box-sizing: border-box;
+      width: 50px;
+      height: 30px;
+    }
+
+    .box-outline {
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      border: 1px solid rgb(200, 200, 200);
+      box-shadow: 0 0 1px #0003;
+    }
+
+    .box-slider,
+    .box-slider-checked {
+      position: absolute;
+      z-index: 900;
+      width: 25px;
+      height: 25px;
+      top: 0;
+      bottom: 0;
+      left: 2.5px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0.5px 0.5px 4px #0006;
+    }
+
+    .box-slider-checked {
+      z-index: 0;
+      left: 23px;
+      opacity: 0;
+    }
+
+    .box-check,
+    .box-checked {
+      display: none;
+    }
+
+    .box-outline-check {
+      position: absolute;
+      z-index: 200;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 15px;
+      background-color: rgb(48, 243, 77);
+      border: 0;
+      opacity: 0;
+    }
+
+    .box-check:checked~.box-slider {
+      left: 23px;
+      transition: .3s;
+    }
+
+    .box-check:checked~.box-outline-check {
+      opacity: 1;
+      transition: .3s;
+    }
+
+    .box-check:checked~.box-slider-checked {
+      z-index: 990;
+    }
+
+    .box-checked:checked~.box-slider {
+      left: 2.5px;
+      transition: .3s;
+    }
+
+    .box-checked:checked~.box-outline-check {
+      opacity: 0;
+      transition: .3s;
+    }
+  </style>
+
+  <title>ios style checkbox</title>
+</head>
+
+<body>
+  <div class="box-wrapper">
+    <input type="radio" name="slide-check" id="check" class="box-check">
+    <input type="radio" name="slide-check" id="checked" class="box-checked">
+    <div class="box-outline"></div>
+    <label class="box-slider" for="check"></label>
+    <label class="box-slider-checked" for="checked"></label>
+    <div class="box-outline-check"></div>
+  </div>
+
+</body>
+
+</html>
