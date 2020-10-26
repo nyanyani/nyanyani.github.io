@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+    td {
+      position: relative;
+      border: 1px solid #000;
+    }
+    tr:hover {
+      background-color: lightblue;
+    }
+    td {
+      position: relative;
+    }
+    table td:hover::before {
+      position: absolute;
+      content: '';
+      height: 99999px;
+      width: 100%;
+      top: -9999px;
+      left: 0;
+      background-color: lightblue;
+      z-index: -1;
+    }
+  </style>
+  <title>table-hover</title>
+</head>
+<body>
+  <table>
+    <tbody>
+      <tr>
+        <td>Lorem.</td>
+        <td>Ad?</td>
+        <td>Dignissimos.</td>
+        <td>Provident?</td>
+        <td>Consequuntur.</td>
+        <td>Doloremque!</td>
+        <td>Aperiam.</td>
+        <td>Sit?</td>
+        <td>Placeat.</td>
+        <td>Numquam!</td>
+      </tr>
+      <tr>
+        <td>Iste.</td>
+        <td>Obcaecati?</td>
+        <td>Minus.</td>
+        <td>Rerum.</td>
+        <td>Eius.</td>
+        <td>Natus.</td>
+        <td>Laboriosam!</td>
+        <td>Eos!</td>
+        <td>Est.</td>
+        <td>Incidunt!</td>
+      </tr>
+      <tr>
+        <td>Facere!</td>
+        <td>Quasi.</td>
+        <td>Nulla.</td>
+        <td>Voluptas!</td>
+        <td>Omnis.</td>
+        <td>Numquam!</td>
+        <td>Dicta?</td>
+        <td>Similique.</td>
+        <td>Iusto.</td>
+        <td>Nisi!</td>
+      </tr>
+      <tr>
+        <td>Minima.</td>
+        <td>Tempore?</td>
+        <td>Quis?</td>
+        <td>Aperiam.</td>
+        <td>Ratione.</td>
+        <td>Asperiores?</td>
+        <td>Animi?</td>
+        <td>Tempora.</td>
+        <td>Non.</td>
+        <td>Minus.</td>
+      </tr>
+      <tr>
+        <td>Esse?</td>
+        <td>Eum.</td>
+        <td>Et.</td>
+        <td>Vero.</td>
+        <td>Velit.</td>
+        <td>Suscipit.</td>
+        <td>Iste!</td>
+        <td>Ad?</td>
+        <td>Cum!</td>
+        <td>Nisi.</td>
+      </tr>
+      <tr>
+        <td>Amet!</td>
+        <td>Ab!</td>
+        <td>Ipsa!</td>
+        <td>Blanditiis!</td>
+        <td>Perspiciatis!</td>
+        <td>Omnis?</td>
+        <td>Magni.</td>
+        <td>Odio.</td>
+        <td>Hic!</td>
+        <td>Impedit!</td>
+      </tr>
+      <tr>
+        <td>Culpa.</td>
+        <td>At!</td>
+        <td>Consequuntur.</td>
+        <td>Aperiam?</td>
+        <td>Voluptate.</td>
+        <td>Consectetur?</td>
+        <td>Adipisci?</td>
+        <td>Obcaecati?</td>
+        <td>Aspernatur?</td>
+        <td>Commodi.</td>
+      </tr>
+      <tr>
+        <td>Aperiam!</td>
+        <td>Repellat.</td>
+        <td>Vero.</td>
+        <td>Et!</td>
+        <td>Recusandae.</td>
+        <td>Praesentium.</td>
+        <td>Animi.</td>
+        <td>Saepe!</td>
+        <td>Cupiditate.</td>
+        <td>Eius.</td>
+      </tr>
+      <tr>
+        <td>Quo!</td>
+        <td>Neque.</td>
+        <td>Explicabo.</td>
+        <td>Ad.</td>
+        <td>Unde.</td>
+        <td>Minima?</td>
+        <td>Doloremque!</td>
+        <td>Eveniet.</td>
+        <td>Nesciunt?</td>
+        <td>Rem.</td>
+      </tr>
+      <tr>
+        <td>Omnis.</td>
+        <td>Harum?</td>
+        <td>Consectetur.</td>
+        <td>Vero.</td>
+        <td>Doloribus?</td>
+        <td>Beatae?</td>
+        <td>Id?</td>
+        <td>Blanditiis!</td>
+        <td>Modi?</td>
+        <td>Nihil.</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

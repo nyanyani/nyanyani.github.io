@@ -9,7 +9,7 @@
     html {
       zoom: 4;
     }
-
+    
     * {
       box-sizing: inherit;
     }
@@ -29,29 +29,41 @@
       border-radius: 9999px;
       border: 1px solid rgb(200, 200, 200);
       box-shadow: 0 0 1px #0003;
+      transition: .3s;
     }
 
     .box-slider {
       position: absolute;
+      box-sizing: content-box;
       z-index: 900;
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 26px;
+      padding: 0 3px;
       top: 0;
       bottom: 0;
       left: 2.5px;
       margin: auto;
-      border-radius: 50%;
+      border-radius: 13px;
       background-color: #fff;
       box-shadow: 0.5px 0.5px 4px #0006;
       cursor: pointer;
-      transition: .3s;
+      transition: left 1s , width .5s .3s, padding .5s;
+      /* unchecked的设置, padding 先变化 */
+    }
+
+    .box-check:checked~.box-slider {
+      left: 22px;
+      width: 26px;
+      padding: 0 0;
+      transition: left 1s , width .5s , padding .5s .3s;
+      /* 覆盖之前的设置, 宽度先变化 */
     }
 
     .box-check {
       display: none;
     }
 
-    .box-outline-check {
+    /* .box-outline-check {
       position: absolute;
       z-index: 800;
       width: 100%;
@@ -62,21 +74,18 @@
       background-color: rgb(48, 243, 77);
       border: 0;
       opacity: 0;
-      transition: .3s;
-    }
-
-    .box-check:checked~.box-slider {
-      left: 22px;
+      transition: .8s;
     }
 
     .box-check:checked~.box-outline-check {
       opacity: 1;
-    }
-    /* .box-check:checked~.box-outline {
+    } */
+
+    .box-check:checked~.box-outline {
       border-width: 15px;
       border-color: rgb(48, 243, 77);
       transition: .3s;
-    } */
+    }
   </style>
 
   <title>ios style checkbox</title>

@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "fontAwesome";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(../fonts/fontawesome/webfonts/fa-solid-900.eot);
+  src: url(../fonts/fontawesome/webfonts/fa-solid-900.eot?iefix) format("embedded-opentype"), url(../fonts/fontawesome/webfonts/fa-solid-900.woff2) format("woff2"), url(../fonts/fontawesome/webfonts/fa-solid-900.ttf) format("woff"), url(../fonts/fontawesome/webfonts/fa-solid-900.svg#fontawesome) format("svg");
+}
+/* @font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(../webfonts/fa-solid-900.eot);
+  src: url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../webfonts/fa-solid-900.woff2) format("woff2"), url(../webfonts/fa-solid-900.woff) format("woff"), url(../webfonts/fa-solid-900.ttf) format("truetype"), url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")
+} */
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fa,
+.fas {
+  font-family: "fontAwesome";
+  font-weight: 900;
+}
+
+.fa {
+  display: inline-block;
+}
+
+.fa-sm {
+  font-size: 0.75em;
+}
+
+.fa-lg {
+  font-size: 1.333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-fw {
+  width: 2em;
+}
+
+.fa-ul {
+  padding: 20px;
+}
+
+.fa-li::before {
+  margin-left: -20px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=fontawesome.css.map */
