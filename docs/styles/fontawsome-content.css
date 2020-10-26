@@ -1,0 +1,37 @@
+/* || sass对Unicode的转义有问题
+** icons content */
+
+/* // @source - [@Stephn-R](https://github.com/sass/sass/issues/1395#issuecomment-57483844)
+// @description converts 1 or more characters into a unicode
+// @markup {scss}
+// unicode("e655"); // "\e655"
+@function unicode($str){
+    @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
+} */
+.fa-zhihu::before {
+  content: "\f63f";
+}
+
+.fa-youtube::before {
+  content: "\f167";
+}
+
+.fa-yandex::before {
+  content: "\f413";
+}
+
+.fa-xbox::before {
+  content: "\f412";
+}
+
+.fa-weixin::before {
+  content: "\f1d7";
+}
+
+.fa-toilet::before {
+  content: "\f7d8";
+}
+
+.fa-clock::before {
+  content: "\f017";
+}
