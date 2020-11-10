@@ -87,7 +87,7 @@
   <script type="task09" id="ch0103/09">
     var r = Number(prompt('input r:'))
     if (r > 0 && r < 10000)
-      console.log((2 * r).toFixed(4), (r * 3.14159).toFixed(4), (r ** 2 * 3.14159).toFixed(4))
+      console.log((2 * r).toFixed(4), (2* r * 3.14159).toFixed(4), (r ** 2 * 3.14159).toFixed(4))
     else
       console.log('invalid input')
   </script>
@@ -154,7 +154,7 @@
     else
       console.log('invalid input')
   </script>
-  <script type="task17" id="ch0103/17">
+  <script xtype="task17" id="ch0103/17">
     var x1 = Number(prompt('input x1:'))
     var y1 = Number(prompt('input x1:'))
     var x2 = Number(prompt('input x2:'))
@@ -165,7 +165,7 @@
     var a = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
     var b = Math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2)
     var c = Math.sqrt((x2 - x3) ** 2 + (y2 - y3) ** 2) 
-    <!--海伦公式 -->
+    // 海伦公式
       var p = (a + b + c) / 2
     var s = Math.sqrt(p * (p - a) * (p - b) * (p - c)).toFixed(2)
     if (s != 0)
