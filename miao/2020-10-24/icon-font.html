@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../docs/styles/fontawesome.css">
   <title>font-awesome icon font practice</title>
 </head>
+
 <body>
   <header>
     <p>links refer: <a href="https://fontawesome.com/v4.7.0/examples/">Basic usage </a> </p>
   </header>
   <main>
-    <section>
+    <section class="">
       <ul class="icon-list">
-        <li><i class="fa fa-clock"></i></li>
-        <li><i class="fa fa-youtube"></i></li>
-        <li><i class="fa fa-yandex"></i></li>
-        <li><i class="fa fa-xbox"></i></li>
-        <li><i class="fa fa-weixin"></i></li>
-        <li><i class="fa fa-toilet"></i></li>
+        <li><i class="fa fa-music"></i>basic icons</li>
+        <li><i class="fa fa-search fa-sm"></i>smaller icons</li>
+        <li><i class="fa fa-search fa-lg"></i>larger icons</li>
+        <li><i class="fa fa-heart fa-2x"></i>larger icons</li>
+        <li><i class="fa fa-star fa-fw"></i>fixed width icons 1</li>
+        <li><i class="fa fa-stars fa-fw"></i>fixed width icons 2</li>
+        <li>
+          <ul class="fa-ul">
+            <li><i class="fa fa-li fa-music"></i>list icons 1</li>
+            <li><i class="fa fa-li fa-search"></i>list icons 2</li>
+            <li><i class="fa fa-li fa-heart"></i>list icons 3</li>
+            <li><i class="fa fa-li fa-star"></i>list icons 4</li>
+            <li><i class="fa fa-li fa-film"></i>list icons 5</li>
+          </ul>
+        </li>
+        <ul class="icon-stack">
+          <li>
+            <span class="fa-stack">
+              <i class="fa fa-stack-1x fa-film"></i>
+              <i class="fa fa-stack-2x fa-ban text-danger"></i>
+            </span>fa-film on fa-ban
+          </li>
+          <li>
+            <span class="fa-stack fa-lg">
+              <i class="fas fa fa-stack-2x fa-circle"></i>
+              <i class="fas fa-stack-1x fa-inverse fa-flag"></i>
+            </span>fa-flag on fa-circle fa-lg
+          </li>
+        </ul>
+        <br>
+        <li><i class="fa fa-star-half fa-border fa-pull-left fa-3x"></i>Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Obcaecati pariatur inventore, iusto consequatur cupiditate ut sint ipsa illo eos ratione?
+          Recusandae facere enim esse repellendus ullam, doloremque voluptate fuga maiores.Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Quia, tempore optio vero fugit, alias inventore cum vitae corporis temporibus
+          quos perspiciatis quidem adipisci! Voluptatibus voluptate eaque porro ea ipsa odio!</li>
+        <br>
+
+        <li class="custom-rating">
+          <div class="stars-rating method1">
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+          </div>
+        </li>
+        <li class="custom-rating">
+          <div class="stars-rating method2">
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+            <i class="fal fa-star"></i>
+          </div>
+        </li>
       </ul>
     </section>
   </main>
 </body>
+
 </html>

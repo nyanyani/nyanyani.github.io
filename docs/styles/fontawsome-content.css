@@ -8,30 +8,70 @@
 @function unicode($str){
     @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
 } */
-.fa-zhihu::before {
-  content: "\f63f";
+
+.fa-music::before {
+  content: "\f001";
 }
 
-.fa-youtube::before {
-  content: "\f167";
+.fa-search::before {
+  content: "\f002";
 }
 
-.fa-yandex::before {
-  content: "\f413";
+.fa-heart::before {
+  content: "\f004";
 }
 
-.fa-xbox::before {
-  content: "\f412";
+.fa-star::before {
+  content: "\f005";
 }
 
-.fa-weixin::before {
-  content: "\f1d7";
+.fa-user::before {
+  content: "\f007";
 }
 
-.fa-toilet::before {
-  content: "\f7d8";
+.fa-film::before {
+  content: "\f008";
 }
 
-.fa-clock::before {
-  content: "\f017";
+.fa-th-large::before {
+  content: "\f009";
 }
+
+
+
+.fa-star::before {
+  content: "\f005"; }
+
+.fa-star-and-crescent::before {
+  content: "\f699"; }
+
+.fa-star-christmas::before {
+  content: "\f7d4"; }
+
+.fa-star-exclamation::before {
+  content: "\f2f3"; }
+
+.fa-star-half::before {
+  content: "\f089"; }
+
+.fa-star-half-alt::before {
+  content: "\f5c0"; }
+
+.fa-star-of-david::before {
+  content: "\f69a"; }
+
+.fa-star-of-life::before {
+  content: "\f621"; }
+
+.fa-stars::before {
+  content: "\f762"; }
+
+.fa-ban::before {
+  content: "\f05e";
+}
+
+.fa-flag::before {
+  content: "\f024"; }
+
+.fa-circle::before {
+  content: "\f111"; }

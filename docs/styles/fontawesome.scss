@@ -73,10 +73,22 @@ ul {
   list-style: none;
 }
 
+// icon content
+// @import "fontawsome-content.css";
+
+.fa-music::before {
+  content: '\f001';
+}
 
 // basic icons
-.fa {
+.fa,
+.fas,
+.fal {
   display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }
 
 // smaller icons
@@ -104,13 +116,107 @@ ul {
 
 // list icons 
 .fa-ul {
-  padding: 20px;
+  padding: 1.5em;
 }
 
 .fa-li::before {
-  margin-left: -20px;
+  margin-left: -1.5em;
   text-align: center;
 }
 
-// icon content
-@import "fontawsome-content.css";
+// Stacked Icons
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  line-height: 2em;
+  width: 2em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  width: 100%;
+}
+
+.fa-stack-1x {
+  font-size: initial;
+  line-height: inherit;
+}
+
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.text-danger {
+  color: #d9534f;
+}
+
+// Bordered & Pulled Icons
+.fa-pull-left {
+  float: left;
+  margin-right: 5px;
+}
+
+.fa-border::before {
+  border: 3px solid #eee;
+  border-radius: .25em;
+  padding: .25em;
+}
+
+// rating hover custom css
+.custom-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &::before {
+    content: 'rating:';
+    display: inline-block;
+  }
+}
+
+.stars-rating {
+  width: 90px;
+  cursor: pointer;
+  display: flex;
+
+  &.method1 {
+    &:hover {
+      ::before {
+        font-weight: 900;
+      }
+    }
+
+    i:hover {
+      ~::before {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &.method2 {
+    .fa-star {
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          order: -$i;
+        }
+      }
+
+      &:hover {
+        font-weight: 900;
+
+        ~.fa-star {
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}

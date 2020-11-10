@@ -1,4 +1,4 @@
-@import "fontawsome-content.css";
+@charset "UTF-8";
 @font-face {
   font-family: "Font Awesome 5 Brands";
   font-style: normal;
@@ -68,8 +68,18 @@ ul {
   list-style: none;
 }
 
-.fa {
+.fa-music::before {
+  content: "";
+}
+
+.fa,
+.fas,
+.fal {
   display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }
 
 .fa-sm {
@@ -103,12 +113,100 @@ ul {
 }
 
 .fa-ul {
-  padding: 20px;
+  padding: 1.5em;
 }
 
 .fa-li::before {
-  margin-left: -20px;
+  margin-left: -1.5em;
   text-align: center;
+}
+
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  line-height: 2em;
+  width: 2em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  width: 100%;
+}
+
+.fa-stack-1x {
+  font-size: initial;
+  line-height: inherit;
+}
+
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.text-danger {
+  color: #d9534f;
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: 5px;
+}
+
+.fa-border::before {
+  border: 3px solid #eee;
+  border-radius: 0.25em;
+  padding: 0.25em;
+}
+
+.custom-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.custom-rating::before {
+  content: "rating:";
+  display: inline-block;
+}
+
+.stars-rating {
+  width: 90px;
+  cursor: pointer;
+  display: flex;
+}
+.stars-rating.method1:hover ::before {
+  font-weight: 900;
+}
+.stars-rating.method1 i:hover ~ ::before {
+  font-weight: 300;
+}
+.stars-rating.method2 .fa-star:nth-child(1) {
+  order: -1;
+}
+.stars-rating.method2 .fa-star:nth-child(2) {
+  order: -2;
+}
+.stars-rating.method2 .fa-star:nth-child(3) {
+  order: -3;
+}
+.stars-rating.method2 .fa-star:nth-child(4) {
+  order: -4;
+}
+.stars-rating.method2 .fa-star:nth-child(5) {
+  order: -5;
+}
+.stars-rating.method2 .fa-star:hover {
+  font-weight: 900;
+}
+.stars-rating.method2 .fa-star:hover ~ .fa-star {
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=fontawesome.css.map */
