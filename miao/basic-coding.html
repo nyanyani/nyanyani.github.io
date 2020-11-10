@@ -11,7 +11,6 @@
   <script type="task01" id="ch0103/01">
     console.log(Number(prompt('input A:')) + Number(prompt('input B:')))
   </script>
-
   <script type="task02" id="ch0103/02">
     var a = Number(prompt('input a:'));
     var b = Number(prompt('input b:'));
@@ -22,7 +21,6 @@
       console.log(Math.floor(a + b) * c);
     }
   </script>
-
   <script type="task03" id="ch0103/03">
     var a = Number(prompt('input a:'));
     var b = Number(prompt('input b:'));
@@ -33,7 +31,6 @@
       console.log(Math.floor((a + b) / c));
     }
   </script>
-
   <script type="task04" id="ch0103/04">
     var a = Number(prompt('input a:'));
     var b = Number(prompt('input b:'));
@@ -43,7 +40,6 @@
       console.log(Math.floor(a / b), a % b);
     }
   </script>
-
   <script type="task05" id="ch0103/05">
     var a = Number(prompt('input a:'));
     var b = Number(prompt('input b:'));
@@ -53,7 +49,6 @@
       console.log((a / b).toFixed(9));
     }
   </script>
-
   <script type="task06" id="ch0103/06">
     var a = Number(prompt('input a:'));
     var b = Number(prompt('input b:'));
@@ -63,7 +58,6 @@
       console.log((b / a * 100).toFixed(3)+'%');
     }
   </script>
-
   <script type="task07" id="ch0103/07">
     var x = Number(prompt('input x:'))
     var a = Number(prompt('input a:'))
@@ -75,7 +69,6 @@
     else
       console.log('invalid input')
   </script>
-
   <script type="task08" id="ch0103/08">
     var f = Number(prompt('input f:'))
     if (f >= -459.67)
@@ -83,7 +76,6 @@
     else
       console.log('invalid input')
   </script>
-
   <script type="task09" id="ch0103/09">
     var r = Number(prompt('input r:'))
     if (r > 0 && r < 10000)
@@ -91,7 +83,6 @@
     else
       console.log('invalid input')
   </script>
-
   <script type="task10" id="ch0103/10">
     var r1 = Number(prompt('input r1:'))
     var r2 = Number(prompt('input r2:'))
@@ -100,13 +91,11 @@
     else
       console.log('invalid input')
   </script>
-
   <script type="task11" id="ch0103/11">
     var a = Number(prompt('input a:'))
     var b = Number(prompt('input b:'))
     console.log((a % b).toFixed(4))
   </script>
-
   <script type="task12" id="ch0103/12">
     var r = Number(prompt('input r:'))
     if (r > 0 && r < 100)
@@ -114,7 +103,6 @@
     else
       console.log('invalid input')
   </script>
-
   <script type="task13" id="ch0103/13">
     var a = Math.floor(Number(prompt('input a:')))
     if (a > 99 && a < 999)
@@ -122,7 +110,6 @@
     else
       console.log('invalid input')
   </script>
-
   <script type="task14" id="ch0103/14">
     var h = Number(prompt('input h:'))
     var r = Number(prompt('input r:'))
@@ -132,7 +119,6 @@
     else
       console.log('invalid input')
   </script>
-
   <script type="task15" id="ch0103/15">
     var n = Math.floor(Number(prompt('input n:')))
     var x = Math.floor(Number(prompt('input x:')))
@@ -164,9 +150,10 @@
 
     var a = Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
     var b = Math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2)
-    var c = Math.sqrt((x2 - x3) ** 2 + (y2 - y3) ** 2) 
+    var c = Math.sqrt((x2 - x3) ** 2 + (y2 - y3) ** 2)
     // 海伦公式
-      var p = (a + b + c) / 2
+
+    var p = (a + b + c) / 2
     var s = Math.sqrt(p * (p - a) * (p - b) * (p - c)).toFixed(2)
     if (s != 0)
       console.log(s)
@@ -198,6 +185,258 @@
       console.log('invalid input')
   </script>
 
+  <!-- script[type="task$$"][id="ch0104/$$"]*20 -->
+  <script xtype="task01" id="ch0104/01">
+    var n = Number(prompt('input n:'))
+    if (n > 0)
+      console.log('positive')
+    else if (n == 0)
+      console.log('zero')
+    else
+      console.log('negative')
+  </script>
+  <script xtype="task02" id="ch0104/02">
+    var a = Number(prompt('input n:'))
+    if (Math.abs(a) < 10000)
+      console.log(Math.abs(a).toFixed(2))
+    else
+      console.log('invalid input')
+  </script>
+  <script xtype="task03" id="ch0104/03">
+    var a = Math.floor(Number(prompt('input n:')))
+    if (a <= 0)
+      console.log('invalid input')
+    else if (a % 2 == 0)
+      console.log('even')
+    else
+      console.log('odd')
+  </script>
+  <script xtype="task04" id="ch0104/04">
+    var ch = prompt('input a char:')
+    if (ch.charCodeAt() % 2 == 1)
+      console.log('YES')
+    else
+      console.log('NO')
+  </script>
+  <script xtype="task05" id="ch0104/05">
+    var x = Math.floor(Number(prompt('input x')))
+    var y = Math.floor(Number(prompt('input y')))
+
+    if (x >= 0 && x < 2 ** 32 && Math.abs(y) < 2 ** 31)
+      console.log(x > y ? '>' : (x == y ?
+        '=' : '<'))
+    else
+      console.log('invalid input')
+  </script>
+  <script xtype="task06" id="ch0104/06">
+    var n = Math.floor(Number(prompt('input n:')))
+    if (n < 1000)
+      console.log((n > 9 && n < 100) ? 1 : 0)
+    else
+      console.log('invalid input')
+  </script>
+  <script xtype="task07" id="ch0104/07">
+    var a = Math.floor(Number(prompt('input a:')))
+    var b = Math.floor(Number(prompt('input b:')))
+
+    if (a < 0 || b < 0)
+      console.log('invalid input')
+    else
+      console.log(a > 10 ? 1 : (b > 20 ? 1 : 0))
+  </script>
+  <script xtype="task08" id="ch0104/08">
+    var n = Math.floor(Number(prompt('input n:')))
+    if (Math.abs(n) < 1000000)
+      console.log((n % 3 || n % 5) == 0 ? 'YES' : 'NO')
+    else
+      console.log('invalid input')
+  </script>
+  <script xtype="task09" id="ch0104/09">
+    var n = Math.floor(Number(prompt('input n:')))
+    var output = (n % 3 != 0) * 100 + (n % 5 != 0) * 10 + (n % 7 != 0);
+    switch (output) {
+      case 0:
+        console.log('3', '5', '7')
+        break;
+      case 1:
+        console.log('3', '5')
+        break;
+      case 10:
+        console.log('3', '7')
+        break;
+      case 11:
+        console.log('3')
+        break;
+      case 100:
+        console.log('5', '7')
+        break;
+      case 101:
+        console.log('5')
+        break;
+      case 110:
+        console.log('7')
+        break;
+      case 111:
+        console.log('n')
+        break;
+      default:
+        console.log('invalid input')
+    }
+  </script>
+  <script xtype="task10" id="ch0104/10">
+    var n1 = Math.floor(Number(prompt('input n1:')))
+    var n2 = Math.floor(Number(prompt('input n2:')))
+    if (n1 < 0 && n1 > 100 && n2 < 0 && n2 > 100)
+      console.log('invalid input')
+    else if (n1 < n2 ? (n1 > 60 ? 0 : (n2 > 60 ? 1 : 0)) : (n2 > 60 ? 0 : (n1 > 60 ? 1 : 0)))
+      console.log(1)
+    else
+      console.log(0)
+  </script>
+  <script xtype="task11" id="ch0104/11">
+    var n = Math.floor(Number(prompt('input n:')))
+
+    if (n < 1 && n > 7)
+      console.log('invalid input')
+    else if (n != 1 && n != 3 && n != 5)
+      console.log('YES')
+    else
+      console.log('NO')
+  </script>
+  <script xtype="task12" id="ch0104/12">
+    var d = Math.floor(Number(prompt('input d:')))
+    var wt = d / 1.2
+    var rt = d / 3 + 23
+
+    if (wt == rt)
+      console.log('ALL')
+    else if (wt > rt)
+      console.log('Bike')
+    else
+      console.log('Walk')
+  </script>
+  <script xtype="task13" id="ch0104/13">
+    var n = Number(prompt('input n:'))
+    var result = 0
+    if (n >= 0)
+      if (n < 5)
+        result = -n + 2.5
+    else if (n < 10)
+      result = 2 - 1.5 * (x - 3) ** 2
+    else if (n < 20)
+      result = x / 2 - 1.5
+    else
+      console.log('invalid number')
+    else
+      console.log('invalid number')
+
+    console.log(result.toFixed(3))
+  </script>
+  <script xtype="task14" id="ch0104/14">
+    var n = Math.floor(Number(prompt('input n:')))
+    var ch = prompt('input ch:')
+    var result = 8
+    if (n > 1000)
+      result += Math.ceil((n - 1000) / 500) * 4
+    if (ch == 'y')
+      result += 5
+    console.log(result)
+  </script>
+  <script xtype="task15" id="ch0104/15">
+    var n1 = Math.floor(Number(prompt('input n1:')))
+    var n2 = Math.floor(Number(prompt('input n2:')))
+    var n3 = Math.floor(Number(prompt('input n3:')))
+
+    console.log(n1 > n2 ? (n2 > n3 ? n2 : n3) : (n1 > n3 ? n1 : n3))
+  </script>
+  <script xtype="task16" id="ch0104/16">
+    var n1 = Math.floor(Number(prompt('input n1:')))
+    var n2 = Math.floor(Number(prompt('input n2:')))
+    var n3 = Math.floor(Number(prompt('input n3:')))
+
+    if ((n1 + n2) <= n3 || (n1 + n3) <= n2 || (n2 + n3) <= n1)
+      console.log('no')
+    else
+      console.log('yes')
+  </script>
+  <script xtype="task17" id="ch0104/17">
+    var n = Math.floor(Number(prompt('input n:')))
+    if (n % 4 == 0) {
+      if (n % 400 != 0 || n % 3200 == 0)
+        console.log('N')
+      else
+        console.log('Y')
+    } else
+      console.log('N')
+  </script>
+  <script xtype="task18" id="ch0104/18">
+    var x = Math.floor(Number(prompt('input x:')))
+    var y = Math.floor(Number(prompt('input y:')))
+
+    if (Math.abs(x) <= 1 && Math.abs(y) <= 1)
+      console.log('yes')
+    else
+      console.log('no')
+  </script>
+  <script xtype="task19" id="ch0104/19">
+    var n1 = Math.floor(Number(prompt('input n1:')))
+    var n2 = Math.floor(Number(prompt('input n2:')))
+    var ch = prompt('input ch:')
+
+    switch (ch) {
+      case '+':
+        console.log(n1 + n2)
+        break;
+      case '-':
+        console.log(n1 - n2)
+        break;
+      case '*':
+        console.log(n1 * n2)
+        break;
+      case '/':
+        if (n2 == 0)
+          console.log('Invalid operator')
+        else
+          console.log(n1 / n2)
+        break;
+      default:
+        console.log('invalid input')
+        break;
+    }
+  </script>
+  <script xtype="task20" id="ch0104/20">
+    var a = Number(prompt('input a:'))
+    var b = Number(prompt('input b:'))
+    var c = Number(prompt('input c:'))
+
+    var delta = b ** 2 - 4 * a * c
+    var x1 = 0
+    var x2 = 0
+
+    if (delta == 0) {
+      x1 = (-b + Math.sqrt(delta)) / (2 * a)
+      console.log('x1=x2=' + x1.toFixed(5))
+    } else if (delta < 0) {
+      var imaginary = Math.sqrt(4 * a * c - b * b) / (2 * a)
+      var real = -b / (2 * a)
+      console.log('x1=' + real.toFixed(5) + '+' + imaginary.toFixed(5) + 'i;x2=' + real.toFixed(5) + '-' + imaginary.toFixed(5) + 'i')
+    } else {
+      x1 = (-b + Math.sqrt(delta)) / (2 * a)
+      x2 = (-b + Math.sqrt(delta)) / (2 * a)
+      console.log('x1=' + x1.toFixed(5) +';x2=' + x2.toFixed(5))
+    }
+
+  </script>
+  <script xtype="task21" id="ch0104/21">
+    var n = Math.floor(Number(prompt('input n:')))
+    var x = Math.floor(Number(prompt('input x:')))
+    var y = Math.floor(Number(prompt('input y:')))
+
+    if (y > n * x)
+      console.log(0)
+    else
+      console.log(n - Math.ceil(y / x))
+  </script>
 </body>
 
 </html>
