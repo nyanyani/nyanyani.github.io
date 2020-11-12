@@ -25,6 +25,11 @@
     var a = Number(prompt('input a:'));
     var b = Number(prompt('input b:'));
     var c = Number(prompt('input c:'));
+
+    var remainder = (a + b) % c
+    var sum = a + b - remainder
+    var result = sum / c
+    
     if (c == 0 || a > 10000 || b > 10000 || c > 10000 || a < -10000 || b < -10000 || c < -10000) {
       console.log('invalid input')
     } else {
@@ -106,7 +111,7 @@
   <script type="task13" id="ch0103/13">
     var a = Math.floor(Number(prompt('input a:')))
     if (a > 99 && a < 999)
-      console.log((a % 10).toString() + (a % 100).toString() + (a / 100).toString())
+      console.log((a % 10).toString() + ((a % 100 - a % 10) / 10).toString() + Math.floor(a / 100).toString())
     else
       console.log('invalid input')
   </script>
@@ -142,7 +147,7 @@
   </script>
   <script type="task17" id="ch0103/17">
     var x1 = Number(prompt('input x1:'))
-    var y1 = Number(prompt('input x1:'))
+    var y1 = Number(prompt('input y1:'))
     var x2 = Number(prompt('input x2:'))
     var y2 = Number(prompt('input y2:'))
     var x3 = Number(prompt('input x2:'))
@@ -181,11 +186,12 @@
     var n = Math.floor(Number(prompt('input n:')))
     if (n >= 0 && n < 31)
       console.log(Math.pow(2, n))
+      // 1 << 3 , 移位运算
     else
       console.log('invalid input')
   </script>
 
-  <!-- script[type="task$$"][id="ch0104/$$"]*20 -->
+  <!--  -->
   <script type="task01" id="ch0104/01">
     var n = Number(prompt('input n:'))
     if (n > 0)
@@ -223,8 +229,7 @@
     var y = Math.floor(Number(prompt('input y')))
 
     if (x >= 0 && x < 2 ** 32 && Math.abs(y) < 2 ** 31)
-      console.log(x > y ? '>' : (x == y ?
-        '=' : '<'))
+      console.log(x > y ? '>' : (x == y ? '=' : '<'))
     else
       console.log('invalid input')
   </script>
@@ -248,6 +253,7 @@
     var n = Math.floor(Number(prompt('input n:')))
     if (Math.abs(n) < 1000000)
       console.log((n % 3 || n % 5) == 0 ? 'YES' : 'NO')
+      // console.log((n % 15) == 0 ? 'YES' : 'NO')
     else
       console.log('invalid input')
   </script>
@@ -282,6 +288,14 @@
       default:
         console.log('invalid input')
     }
+    // if (n % 3 == 0)
+    //   console.log('3')
+    // if (n % 5 == 0)
+    //   console.log('5')
+    // if (n % 7 == 0)
+    //   console.log('7')
+    // if (n % 3 != 0 && n % 5 != 0 && n % 7 != 0)
+    //   console.log('n')
   </script>
   <script type="task10" id="ch0104/10">
     var n1 = Math.floor(Number(prompt('input n1:')))
@@ -292,6 +306,19 @@
       console.log(1)
     else
       console.log(0)
+    // if (a >= 60 && b < 60 || a < 60 && b >= 60)
+    //  console.log(1)
+    // else
+    //  console.log(0)
+
+    // var count = 0;
+    // if (a < 60)
+    //   count++
+    // if (b < 60)
+    //   count++
+    // ...
+    // if (count == 1)
+    //   console.log(1) 
   </script>
   <script type="task11" id="ch0104/11">
     var n = Math.floor(Number(prompt('input n:')))
@@ -316,20 +343,20 @@
       console.log('Walk')
   </script>
   <script type="task13" id="ch0104/13">
-    var n = Number(prompt('input n:'))
+    var x = Number(prompt('input x:'))
     var result = 0
-    if (n >= 0)
-      if (n < 5)
-        result = -n + 2.5
-    else if (n < 10)
-      result = 2 - 1.5 * (x - 3) ** 2
-    else if (n < 20)
-      result = x / 2 - 1.5
-    else
+    if (x >= 0) {
+      if (x < 5)
+        result = -x + 2.5
+      else if (x < 10)
+        result = 2 - 1.5 * (x - 3) ** 2
+      else if (x < 20)
+        result = x / 2 - 1.5
+      else
+        console.log('invalid number')
+    } else{
       console.log('invalid number')
-    else
-      console.log('invalid number')
-
+    }
     console.log(result.toFixed(3))
   </script>
   <script type="task14" id="ch0104/14">
@@ -346,7 +373,12 @@
     var n1 = Math.floor(Number(prompt('input n1:')))
     var n2 = Math.floor(Number(prompt('input n2:')))
     var n3 = Math.floor(Number(prompt('input n3:')))
-
+    //var max = n1
+    //if (n2 > max)
+    //  max = n2
+    //if (n3 > max)  
+    //  max = n3
+    //console.log(max)  
     console.log(n1 > n2 ? (n2 > n3 ? n2 : n3) : (n1 > n3 ? n1 : n3))
   </script>
   <script type="task16" id="ch0104/16">
@@ -368,6 +400,10 @@
         console.log('Y')
     } else
       console.log('N')
+    // if( n % 400 == 0 || n % 4 == 0 && n % 3200 != 0)  
+    // console.log('Y')
+    // else
+    // console.log('N')
   </script>
   <script type="task18" id="ch0104/18">
     var x = Math.floor(Number(prompt('input x:')))
@@ -402,7 +438,16 @@
       default:
         console.log('invalid input')
         break;
-    }
+    } 
+
+    // if (ch == '+')
+    //  console.log(a + b)
+    // else if(ch == '-')
+    //  console.log(a - b)
+    // else if(ch == '*')
+    //  console.log(a * b)
+    // else if(ch == '/')
+    //  console.log(a / b)
   </script>
   <script type="task20" id="ch0104/20">
     var a = Number(prompt('input a:'))
@@ -410,19 +455,20 @@
     var c = Number(prompt('input c:'))
 
     var delta = b ** 2 - 4 * a * c
+    var sqrt_delta = Math.sqrt(delta)
     var x1 = 0
     var x2 = 0
 
     if (delta == 0) {
-      x1 = (-b + Math.sqrt(delta)) / (2 * a)
+      x1 = (-b + sqrt_delta) / (2 * a)
       console.log('x1=x2=' + x1.toFixed(5))
     } else if (delta < 0) {
       var imaginary = Math.sqrt(4 * a * c - b * b) / (2 * a)
       var real = -b / (2 * a)
       console.log('x1=' + real.toFixed(5) + '+' + imaginary.toFixed(5) + 'i;x2=' + real.toFixed(5) + '-' + imaginary.toFixed(5) + 'i')
     } else {
-      x1 = (-b + Math.sqrt(delta)) / (2 * a)
-      x2 = (-b + Math.sqrt(delta)) / (2 * a)
+      x1 = (-b + sqrt_delta) / (2 * a)
+      x2 = (-b + sqrt_delta) / (2 * a)
       console.log('x1=' + x1.toFixed(5) +';x2=' + x2.toFixed(5))
     }
 
@@ -436,6 +482,718 @@
       console.log(0)
     else
       console.log(n - Math.ceil(y / x))
+  </script>
+
+  <!-- script[type="task$$"][id="ch0104/$$"]*20 -->
+  <script type="task01" id="ch0105/01">
+    var n = Math.floor(Number(prompt('input n:')))
+
+    var sum = 0;
+    for (var i = 1; i <= n; i++) {
+      sum += Math.floor(Number(prompt('input' + i + ':')))
+    }
+    console.log((sum / n).toFixed(2))
+  </script>
+  <script type="task02" id="ch0105/02">
+    var sum = 0;
+    for (var i = 0; i < 12; i++) {
+      sum += Number(prompt('input n:'))
+    }
+    console.log('$' + (sum / 12).toFixed(2))
+  </script>
+  <script type="task03" id="ch0105/03">
+    var n = Math.floor(Number(prompt('input n:')))
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+      sum += Number(prompt('input n' + i))
+    }
+    console.log((sum / n).toFixed(4))
+  </script>
+  <script type="task04" id="ch0105/04">
+    var n = Math.floor(Number(prompt('input n:')))
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+      sum += Math.floor(Number(prompt('input n' + i)))
+    }
+
+    console.log(sum, (sum / n).toFixed(5))
+  </script>
+  <script type="task05" id="ch0105/05">
+    var n = Math.floor(Number(prompt('input n:')))
+    var max = 0;
+    for (var i = 0; i < n; i++) {
+      var input = Number(Math.floor(Number(prompt('input n' + i))))
+      max = input > max ? input : max;
+    }
+    console.log(max)
+  </script>
+  <script type="task06" id="ch0105/06">
+    var n = Math.floor(Number(prompt('input n:')))
+    var max = -infinity;
+    var min = infinity;
+    for (var i = 0; i < n; i++) {
+      var input = Math.floor(Number(prompt('input n' + i)))
+      max = input > max ? input : max;
+      min = input > min ? min : input;
+    }
+    console.log(max - min)
+  </script>
+  <script type="task07" id="ch0105/07">
+    var n = Math.floor(Number(prompt('input n:')))
+    var gold = 0;
+    var sliver = 0;
+    var copper = 0;
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+      gold += Math.floor(Number(prompt('input day' + i + 'gold number:')))
+      sliver += Math.floor(Number(prompt('input day' + i + 'sliver number:')))
+      copper += Math.floor(Number(prompt('input day' + i + 'copper number:')))
+    }
+
+    sum = gold + sliver + sum
+    console.log(sum, gold, sliver, copper)
+  </script>
+  <script type="task08" id="ch0105/08">
+    var n = Math.floor(Number(prompt('input n:')))
+    var sum = 0;
+    var total = (n - 2) * 180;
+
+    for (var i = 1; i < n; i++) {
+      sum += Math.floor(Number(prompt('input n' + i)))
+    }
+
+    console.log(total - sum)
+  </script>
+  <script type="task09" id="ch0105/09">
+    var m = Math.floor(Number(prompt('input m:')))
+    var n = Math.floor(Number(prompt('input n:')))
+    var sum = 0;
+
+    // 减少循环次数, 减少了if判断次数
+    // 将边界条件都设置为奇数
+    // if (m % 2 == 0)
+    //   m += 1
+    // if (n % 2 == 0)
+    //   n -= 1
+    // var c = mk
+    // while(c <= n) {
+    //   sum += c
+    //   c += 2
+    // }
+
+    if (0 <= m && m <= n && n <= 300)
+      for (var i = m; i <= n; i++) {
+        if (i % 2 == 1)
+          sum += i
+      }
+    else
+      console.log('invalid input')
+
+    console.log(sum)
+  </script>
+  <script type="task10" id="ch0105/10">
+    var m = Math.floor(Number(prompt('input m:')))
+    var n = Math.floor(Number(prompt('input n:')))
+    var sum = 0;
+
+    if (0 < m && m < n && n < 1000)
+      for (var i = m; i <= n; i++) {
+        if (i % 17 == 0)
+          sum += i
+      }
+    else
+      console.log('invalid input')
+
+    console.log(sum)
+  </script>
+  <script type="task11" id="ch0105/11">
+    var n = Math.floor(Number(prompt('input n:')))
+    var count1 = 0
+    var count5 = 0
+    var count10 = 0
+    for (var i = 0; i < n; i++) {
+      var input = Math.floor(Number(prompt('input n' + i + ':')))
+      if (input == 1)
+        count1++
+      if (input == 5)
+        count5++
+      if (input == 10)
+        count10++
+    }
+    console.log(count1)
+    console.log(count5)
+    console.log(count10)
+  </script>
+  <script type="task12" id="ch0105/12">
+    var n = Math.floor(Number(prompt('input n:')))
+    var m = Math.floor(Number(prompt('input m:')))
+    var count = 0
+    for (var i = 0; i < n; i++) {
+      var input = Math.floor(Number(prompt('input n' + i + ':')))
+      if (input == m)
+        count++
+    }
+    console.log(count)
+  </script>
+  <script type="task13" id="ch0105/13">
+    var a = Math.floor(Number(prompt('input a:')))
+    var n = Math.floor(Number(prompt('input n:')))
+    var result = 1
+
+    for (var i = 0; i < n; i++) {
+      result *= a
+    }
+
+    console.log(result)
+  </script>
+  <script type="task14" id="ch0105/14">
+    var x = Math.floor(Number(prompt('input x:')))
+    var n = Math.floor(Number(prompt('input n:')))
+    var result = x
+
+    for (var i = 0; i < n; i++) {
+      result *= 1.001
+    }
+
+    console.log(result.toFixed(4))
+  </script>
+  <script type="task15" id="ch0105/15">
+    var r = Math.floor(Number(prompt('input r:')))
+    var m = Math.floor(Number(prompt('input m:')))
+    var y = Math.floor(Number(prompt('input y:')))
+    var result = m
+
+    for (var i = 0; i < y; i++) {
+      result *= 1 + r / 100
+    }
+
+    console.log(Math.floor(result))
+  </script>
+  <script type="task16" id="ch0105/16">
+    var n = Math.floor(Number(prompt('input n:')))
+    var k = Math.floor(Number(prompt('input k:')))
+    var saving = 0
+    var income = n
+    var price = 200
+
+    for (var i = 1; i <= 20; i++) {
+      saving += income
+      if (saving >= price) {
+        console.log(i)
+        break
+      }
+      price *= 1 + k / 100
+      // 下一年房价
+    }
+    if (saving < price)
+      console.log('Impossible')
+  </script>
+  <script type="task17" id="ch0105/17">
+    var k = Math.floor(Number(prompt('input k:')))
+    // 该写法考虑到了k = 1, k = 2 的位置
+    // (1 0) 1 1 2 3 5... 即将斐波那契数列扩展为这种形式
+    var prev1 = 0
+    var prev2 = 1
+    var now = 1
+    for (var i = 0; i < k; i++) {
+      now = prev1 + prev2
+      prev2 = prev1
+      prev1 = now
+    }
+    console.log(now)
+  </script>
+  <script type="task18" id="ch0105/18">
+    var n = Math.floor(Number(prompt('input n:')))
+    var x = 1 / (Math.floor(Number(prompt('input x total:'))) / Math.floor(Number(prompt('input x effective:'))))
+    var y = 0
+    var delta = 0
+    var result = ''
+    for (var i = 0; i < n - 1; i++) {
+      y = 1 / (Math.floor(Number(prompt('input y total:'))) / Math.floor(Number(prompt('input y effective:'))))
+      delta = x - y
+      if (Math.abs(delta) > 0.05) {
+        if (delta > 0)
+          result += 'worse'
+        else
+          result += 'better'
+      } else
+        result += 'same'
+      result += '\n'
+    }
+    result = result.slice(0, result.length - 1)
+    console.log(result)
+    // for (var i = 0; i < n; i++) {
+    //   console.log(result[i])
+    // }
+  </script>
+  <script type="task19" id="ch0105/19">
+    var n = Math.floor(Number(prompt('input n:')))
+    var x = 0
+    var y = 0
+    var p = 0
+    var sum = 0
+
+    for (var i = 0; i < n; i++) {
+      x = Math.floor(Number(prompt('input x coord:')))
+      y = Math.floor(Number(prompt('input y coord:')))
+      p = Math.floor(Number(prompt('input p num:')))
+      var d = Math.sqrt(x ** 2 + y ** 2)
+      sum += d / 50 * 2 + p * (0.5 + 1)
+    }
+
+    console.log(Math.ceil(sum))
+  </script>
+  <script type="task20" id="ch0105/20">
+    var h = Math.floor(Number(prompt('input h:')))
+    var sum = 0
+    var sum_r = 0
+    var rebound = h / 2
+
+    for (var i = 1; i <= 10; i++) {
+      sum = sum_r + h
+      // 第i次落地时经过的米数
+      sum_r = sum + rebound
+      // 第i次落地反弹后经过的米数
+      h = rebound
+      // 第i+1次落地的高度
+      rebound /= 2
+      // 第i+1次落地反弹的高度
+    }
+
+    console.log(sum)
+    console.log(rebound * 2)
+  </script>
+  <script type="task21" id="ch0105/21">
+    var n = Math.floor(Number(prompt('input n:')))
+    var temp = 0
+    while (n != 1) {
+      temp = n
+      if (n % 2 == 1) {
+        n = 3 * n + 1
+        console.log(temp + '*3+1=' + n)
+      } else {
+        n /= 2
+        console.log(temp + '/2=' + n)
+      }
+    }
+    console.log('End')
+  </script>
+  <script type="task22" id="ch0105/22">
+    var m = 1
+    var saving = 0
+    var cash = 0
+    var total = 0
+    var flag = false
+    do {
+      var n = Math.floor(Number(prompt('input n' + m + ':')))
+      cash = cash + 300 - n
+      if (cash >= 100) {
+        saving += cash - cash % 100
+        cash = cash % 100
+      } else if (cash < 0) {
+        cash = 0
+        flag = true
+        console.log('-' + m)
+      }
+      m++
+    } while (m <= 12)
+    if (!flag)
+      console.log(saving * 1.2 + cash)
+  </script>
+  <script type="task23" id="ch0105/23">
+    var m = Math.floor(Number(prompt('input m:')))
+    var n = Math.floor(Number(prompt('input n:')))
+    var count = 0
+    for (var i = 0; i < n; i++) {
+      var sub = Math.floor(Number(prompt('input' + i + 'th:')))
+      if (m >= sub)
+        m -= sub
+      else
+        count++
+    }
+    console.log(count)
+  </script>
+  <script type="task24" id="ch0105/24">
+    var n = Math.floor(Number(prompt('input n:')))
+    var high = 0
+    var low = 0
+    var count = 0
+    for (var i = 0; i < n; i++) {
+      high = Math.floor(Number(prompt('input h:')))
+      low = Math.floor(Number(prompt('input h:')))
+      if (high >= 90 && high <= 140 && low >= 60 && low <= 90)
+        count++
+      else
+        count = 0
+    }
+
+    console.log(count)
+  </script>
+  <script type="task25" id="ch0105/25">
+    var seven = 0
+    var nine = 0
+    // 七进制 166 = 97, 所以最高位要从2开始
+    // abc = a * 49 + b * 7 + c > 100
+    // cba = c * 81 + b * 9 + a > 100
+    //  48 * a - 2 * b - 80 * c = 0
+
+    for (var digits = 0; digits < 7; digits++) {
+      for (var tens = 0; tens < 7; tens++) {
+        for (var hundreds = 0; hundreds < 2; hundreds++) {
+          seven = hundreds * 49 + tens * 7 + digits
+          nine = digits * 81 + tens * 9 + hundreds
+          if (seven == nine) {
+            console.log(seven)
+            console.log('' + hundreds + tens + digits)
+            console.log('' + digits + tens + hundreds)
+          }
+        }
+      }
+    }
+  </script>
+  <script xype="task26" id="ch0105/26">
+    var n = Math.floor(Number(prompt('input n:')))
+
+    var count = 0
+    for (var i = 0; i < n; i++) {
+      var m = Math.floor(Number(prompt('input m:')))
+      var thousands = Math.floor(m / 1000)
+      var hundreds = Math.floor(m / 100) - thousands * 10
+      var tens = Math.floor(m / 10) - hundreds * 100
+      var digits = m % 1000
+      if (digits - thousands - hundreds - tens > 0)
+        count++
+    }
+    console.log(count)
+  </script>
+  <script type="task27" id="ch0105/27">
+    var k = Math.floor(Number(prompt('input k:')))
+    var s = 0
+    var i = 1
+    do {
+      s += 1 / i
+      i++
+    } while (k > s)
+    if (k == s)
+      console.log(i)
+    else
+      console.log(i - 1)
+  </script>
+  <script type="task28" id="ch0105/28">
+    var n = Math.floor(Number(prompt('input n:')))
+    var temp = n
+    var result = ''
+    while (Math.abs(temp) >= 1) {
+      temp = temp % 10
+      // 取最低位
+      n = (n - temp) / 10
+      // 将原数字倒数第二位变为最低位
+      result += temp + ' '
+      // 新的数最高位为原数值的最低位, 且纯数值运算排除最高位为0的情况
+      temp = n
+      // 准备下一个位
+    }
+    console.log(result.slice(0, result.length - 1))
+  </script>
+  <script type="task29" id="ch0105/29">
+    var n = Math.floor(Number(prompt('input n:')))
+    var temp = n
+    var result = 0
+    while (Math.abs(temp) >= 1) {
+      temp = temp % 10
+      // 取最低位
+      n = (n - temp) / 10
+      // 将原数字倒数第二位变为最低位
+      result = 10 * result + temp
+      // 新的数最高位为原数值的最低位, 且纯数值运算排除最高位为0的情况
+      temp = n
+      // 准备下一个位
+    }
+    console.log(result)
+  </script>
+  <script type="task30" id="ch0105/30">
+    var m = Math.floor(Number(prompt('input m:')))
+    var k = Math.floor(Number(prompt('input k:')))
+    var temp = m
+    var count = 0
+    if (m % 19 != 0)
+      console.log('NO')
+    else {
+      while (temp >= 1) {
+        temp = temp % 10
+        // 取最低位
+        m = (m - temp) / 10
+        // 将原数字倒数第二位变为最低位
+        if (temp == 3)
+          count++
+        temp = m
+        // 准备下一个位
+      }
+      if (count == k)
+        console.log('YES')
+      else
+        console.log('NO')
+    }
+  </script>
+  <script type="task31" id="ch0105/31">
+    var n = Math.floor(Number(prompt('input n:')))
+    var m = Math.floor(Number(prompt('input m:')))
+    // 1 代表亮
+    // 0 代表灭
+    // lampStatus变长数组, lampStatus[i] 代表第i个灯
+    var lampStatus = []
+    for (var i = 0; i < n; i++) {
+      lampStatus[lampStatus.length] = '1'
+      // 默认为全亮
+    }
+    for (var i = 1; i <= m; i++) {
+      // i 代表第i个人
+      for (var j = 1; j <= n; j++) {
+        var temp = i * j - 1
+        // temp代表第i个人操作的灯
+        if (temp >= n)
+          break;
+        else if (lampStatus[temp] == 0)
+          lampStatus[temp] = 1
+        else if (lampStatus[temp] == 1)
+          lampStatus[temp] = 0
+      }
+    }
+    var result = ''
+    for (var i = 0; i < lampStatus.length; i++) {
+      if (lampStatus[i] == 0)
+        result += (i + 1) + ','
+    }
+    console.log(result.slice(0, result.length - 1))
+  </script>
+  <script type="task32" id="ch0105/32">
+    var n = Math.floor(Number(prompt('input n:')))
+
+    var qn = 2
+    var pn = 1
+    var an = qn / pn
+    var sum = 0
+    for (var i = 0; i < n; i++) {
+      sum += an
+      var temp = qn
+      qn = qn + pn
+      pn = temp
+      an = qn / pn
+    }
+    console.log(sum.toFixed(4))
+  </script>
+  <script type="task33" id="ch0105/33">
+    var n = Math.floor(Number(prompt('input n:')))
+
+    var an = 0
+    var sum = 0
+    for (var i = 1; i <= n; i++) {
+      an = 1 / i
+      if (i % 2 == 0)
+        an = -an
+      sum += an
+    }
+    console.log(sum.toFixed(4))
+  </script>
+  <script type="task34" id="ch0105/34">
+    var n = Math.floor(Number(prompt('input n:')))
+
+    var an = 1
+    var sum = 0
+    for (var i = 1; i <= n; i++) {
+      an *= i
+      sum += an
+    }
+    console.log(sum)
+  </script>
+  <script type="task35" id="ch0105/35">
+    var n = Math.floor(Number(prompt('input n:')))
+
+    var an = 1
+    var sum = 1
+    for (var i = 1; i <= n; i++) {
+      an *= 1 / i
+      sum += an
+    }
+    console.log(sum.toFixed(10))
+  </script>
+  <script type="task36" id="ch0105/36">
+    var x = Number(prompt('input x:'))
+    var n = Math.floor(Number(prompt('input n:')))
+
+    var an = 1
+    var sum = 1
+    for (var i = 1; i <= n; i++) {
+      an *= x
+      sum += an
+    }
+    console.log(sum.toFixed(2))
+  </script>
+  <script type="task37" id="ch0105/37">
+    var m = Math.floor(Number(prompt('input m:')))
+    var n = Math.floor(Number(prompt('input n:')))
+    var x = Math.floor(Number(prompt('input x:')))
+
+    for (var i = 0; i < x; i++) {
+      if (m / n < x) {
+        n += Math.floor(m / n)
+        x--
+      } else {
+        break;
+      }
+    }
+    console.log(n)
+  </script>
+  <script type="task38" id="ch0105/38">
+    var n = Math.floor(Number(prompt('input n:')))
+    var c = 0
+    var result = ''
+    var flag = 0
+    for (var i = n; i >= 0; i--) {
+      c = Math.floor(Number(prompt('input c' + i + ':')))
+      if (i == 0) {
+        result += 0
+        break;
+      } else {
+        c
+        result += c * i + ' '
+      }
+      if (c)
+        flag++
+    }
+    if (flag == 0)
+      console.log(0)
+    else
+      console.log(result.slice(0, result.length - 1))
+  </script>
+  <script type="task39" id="ch0105/39">
+    var n = Math.floor(Number(prompt('input n:')))
+    var sum = 0
+
+    for (var i = 1; i < n; i++) {
+      var digits = i % 10
+      var tens = Math.floor(i / 10)
+      if (digits != 7 && tens != 7 && i % 7 != 0) {
+        sum += i ** 2
+      }
+    }
+    console.log(sum)
+  </script>
+  <script type="task40" id="ch0105/40">
+    var n = Math.floor(Number(prompt('input n:')))
+    var count = 0
+    var digits = 0
+    var temp = 0
+
+    for (var i = 1; i <= n; i++) {
+      temp = i
+      while (1) {
+        digits = temp % 10
+        temp = (temp - digits) / 10
+        // 循环将所有位数遍历一遍
+        if (digits == 1)
+          count++
+        if (temp == 1)
+          count++
+        if (temp < 10)
+          break
+        // 结束条件为已遍历到了最高位
+      }
+    }
+    console.log(count)
+  </script>
+  <script type="task41" id="ch0105/41">
+    var n = Math.floor(Number(prompt('input n:')))
+    var m = Math.floor(Number(prompt('input m:')))
+    var count = 0
+    var digits = 0
+    var temp = 0
+
+    for (var i = n; i <= m; i++) {
+      temp = i
+      while (1) {
+        digits = temp % 10
+        temp = (temp - digits) / 10
+        // 循环将所有位数遍历一遍
+        if (digits == 2)
+          count++
+        if (temp == 2)
+          count++
+        if (temp < 10)
+          break
+        // 结束条件为已遍历到了最高位
+      }
+    }
+    console.log(count)
+  </script>
+  <script type="task42" id="ch0105/42">
+    var x = Math.floor(Number(prompt('input x:')))
+    var y = Math.floor(Number(prompt('input y:')))
+    var ch = prompt('input fill char:')
+    var isFill = Math.floor(Number(prompt('input is filled:')))
+    var output = ''
+    var fill = ch
+
+    for (var i = 0; i < y; i++) {
+      for (var j = 0; j < x; j++) {
+        output += fill
+        if (i == 0 || i == y - 1) {
+          fill = ch
+          continue
+        }
+        if (isFill == 0 && j < (x - 2))
+          fill = ' '
+        else
+          fill = ch
+      }
+      output += '\n'
+    }
+    console.log(output.slice(0, output.length - 1))
+  </script>
+  <script type="task43" id="ch0105/43">
+    var n = Math.floor(Number(prompt('input n:')))
+    var temp = Math.ceil(Math.sqrt(n))
+    for (var i = temp; i < n; i++) {
+      if (n % i == 0) {
+        console.log(i)
+      }
+    }
+  </script>
+  <script type="task44" id="ch0105/44">
+    var n = Math.floor(Number(prompt('input n:')))
+    var count = 0
+    // 求质数
+    for (var i = 2;; i++) {
+      for (var j = 2; j < i; j++) {
+        if (i % j == 0)
+          break
+      }
+      if (i == j)
+        count++
+      if (count == n) {
+        console.log(i)
+        break
+      }
+    }
+  </script>
+  <script type="task45" id="ch0105/45">
+    var n = Math.floor(Number(prompt('input n:')))
+    var sum = 0
+    var date = 0
+    var diff = 0
+    // 1 , 2 3, 4 5 6, 7 8 9 10,
+    // 1 , 2 2, 3 3 3, 4 4 4 4
+    for (var i = 1;; i++) {
+      diff = n - date
+      if (diff > i) {
+        sum += i ** 2
+      } else {
+        sum += i * diff
+        break
+      }
+      date += i
+    }
+    console.log(sum)
   </script>
 </body>
 
