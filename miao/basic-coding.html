@@ -527,10 +527,10 @@
     }
     console.log(max)
   </script>
-  <script type="task06" id="ch0105/06">
+  <script xtype="task06" id="ch0105/06">
     var n = Math.floor(Number(prompt('input n:')))
-    var max = -infinity;
-    var min = infinity;
+    var max = -Infinity;
+    var min = Infinity;
     for (var i = 0; i < n; i++) {
       var input = Math.floor(Number(prompt('input n' + i)))
       max = input > max ? input : max;
@@ -538,7 +538,7 @@
     }
     console.log(max - min)
   </script>
-  <script type="task07" id="ch0105/07">
+  <script xtype="task07" id="ch0105/07">
     var n = Math.floor(Number(prompt('input n:')))
     var gold = 0;
     var sliver = 0;
@@ -550,8 +550,8 @@
       copper += Math.floor(Number(prompt('input day' + i + 'copper number:')))
     }
 
-    sum = gold + sliver + sum
-    console.log(sum, gold, sliver, copper)
+    sum = gold + sliver + copper
+    console.log(gold, sliver, copper, sum)
   </script>
   <script type="task08" id="ch0105/08">
     var n = Math.floor(Number(prompt('input n:')))
@@ -564,7 +564,7 @@
 
     console.log(total - sum)
   </script>
-  <script type="task09" id="ch0105/09">
+  <script xtype="task09" id="ch0105/09">
     var m = Math.floor(Number(prompt('input m:')))
     var n = Math.floor(Number(prompt('input n:')))
     var sum = 0;
@@ -581,28 +581,29 @@
     //   c += 2
     // }
 
-    if (0 <= m && m <= n && n <= 300)
+    if (0 <= m && m <= n && n <= 300) {
       for (var i = m; i <= n; i++) {
         if (i % 2 == 1)
           sum += i
       }
-    else
+    } else {
       console.log('invalid input')
-
+    }
     console.log(sum)
   </script>
-  <script type="task10" id="ch0105/10">
+  <script xtype="task10" id="ch0105/10">
     var m = Math.floor(Number(prompt('input m:')))
     var n = Math.floor(Number(prompt('input n:')))
     var sum = 0;
 
-    if (0 < m && m < n && n < 1000)
+    if (0 < m && m < n && n < 1000) {
       for (var i = m; i <= n; i++) {
         if (i % 17 == 0)
           sum += i
       }
-    else
+    } else {
       console.log('invalid input')
+    }
 
     console.log(sum)
   </script>
@@ -702,7 +703,7 @@
     }
     console.log(now)
   </script>
-  <script type="task18" id="ch0105/18">
+  <script xtype="task18" id="ch0105/18">
     var n = Math.floor(Number(prompt('input n:')))
     var x = 1 / (Math.floor(Number(prompt('input x total:'))) / Math.floor(Number(prompt('input x effective:'))))
     var y = 0
@@ -743,7 +744,7 @@
 
     console.log(Math.ceil(sum))
   </script>
-  <script type="task20" id="ch0105/20">
+  <script xtype="task20" id="ch0105/20">
     var h = Math.floor(Number(prompt('input h:')))
     var sum = 0
     var sum_r = 0
@@ -760,8 +761,7 @@
       // 第i+1次落地反弹的高度
     }
 
-    console.log(sum)
-    console.log(rebound * 2)
+    console.log(sum.toFixed(4) + '\n' + (rebound * 2).toFixed(7))
   </script>
   <script type="task21" id="ch0105/21">
     var n = Math.floor(Number(prompt('input n:')))
@@ -829,7 +829,7 @@
 
     console.log(count)
   </script>
-  <script type="task25" id="ch0105/25">
+  <script xtype="task25" id="ch0105/25">
     var seven = 0
     var nine = 0
     // 七进制 166 = 97, 所以最高位要从2开始
@@ -839,7 +839,7 @@
 
     for (var digits = 0; digits < 7; digits++) {
       for (var tens = 0; tens < 7; tens++) {
-        for (var hundreds = 0; hundreds < 2; hundreds++) {
+        for (var hundreds = 2; hundreds < 7; hundreds++) {
           seven = hundreds * 49 + tens * 7 + digits
           nine = digits * 81 + tens * 9 + hundreds
           if (seven == nine) {
@@ -1044,7 +1044,7 @@
     }
     console.log(n)
   </script>
-  <script type="task38" id="ch0105/38">
+  <script xtype="task38" id="ch0105/38">
     var n = Math.floor(Number(prompt('input n:')))
     var c = 0
     var result = ''
@@ -1126,7 +1126,7 @@
     }
     console.log(count)
   </script>
-  <script type="task42" id="ch0105/42">
+  <script xtype="task42" id="ch0105/42">
     var x = Math.floor(Number(prompt('input x:')))
     var y = Math.floor(Number(prompt('input y:')))
     var ch = prompt('input fill char:')
