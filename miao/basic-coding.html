@@ -719,10 +719,10 @@
           result += 'better'
       } else
         result += 'same'
-      result += '\n'
+      console.log(result)
     }
-    result = result.slice(0, result.length - 1)
-    console.log(result)
+    // result = result.slice(0, result.length - 1)
+    // console.log(result)
     // for (var i = 0; i < n; i++) {
     //   console.log(result[i])
     // }
@@ -761,7 +761,8 @@
       // 第i+1次落地反弹的高度
     }
 
-    console.log(sum.toFixed(4) + '\n' + (rebound * 2).toFixed(7))
+    console.log(sum.toFixed(4))
+    console.log((rebound * 2).toFixed(7))
   </script>
   <script type="task21" id="ch0105/21">
     var n = Math.floor(Number(prompt('input n:')))
@@ -843,9 +844,7 @@
           seven = hundreds * 49 + tens * 7 + digits
           nine = digits * 81 + tens * 9 + hundreds
           if (seven == nine) {
-            console.log(seven)
-            console.log('' + hundreds + tens + digits)
-            console.log('' + digits + tens + hundreds)
+            console.log(seven + '\n' + hundreds + tens + digits + '\n' + digits + tens + hundreds)
           }
         }
       }
@@ -1142,7 +1141,7 @@
           continue
         }
         if (isFill == 0 && j < (x - 2))
-          fill = ' '
+          fill = '\xa0'
         else
           fill = ch
       }
