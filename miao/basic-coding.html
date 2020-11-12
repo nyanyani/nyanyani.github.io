@@ -719,10 +719,10 @@
           result += 'better'
       } else
         result += 'same'
-      console.log(result)
+      result += '\n'
     }
-    // result = result.slice(0, result.length - 1)
-    // console.log(result)
+    result = result.slice(0, result.length - 1)
+    console.log(result)
     // for (var i = 0; i < n; i++) {
     //   console.log(result[i])
     // }
@@ -844,7 +844,9 @@
           seven = hundreds * 49 + tens * 7 + digits
           nine = digits * 81 + tens * 9 + hundreds
           if (seven == nine) {
-            console.log(seven + '\n' + hundreds + tens + digits + '\n' + digits + tens + hundreds)
+            console.log(seven)
+            console.log(hundreds * 100 + tens * 10 + digits)
+            console.log(digits * 100 + tens * 10 + hundreds)
           }
         }
       }
