@@ -709,20 +709,23 @@
     var y = 0
     var delta = 0
     var result = ''
-    for (var i = 0; i < n - 1; i++) {
+    for (var i = 1; i < n; i++) {
       y = 1 / (Math.floor(Number(prompt('input y total:'))) / Math.floor(Number(prompt('input y effective:'))))
       delta = x - y
       if (Math.abs(delta) > 0.05) {
         if (delta > 0)
-          result += 'worse'
+          console.log('worse')
+        // result += 'worse'
         else
-          result += 'better'
+          console.log('better')
+        // result += 'better'
       } else
-        result += 'same'
-      result += '\n'
+        console.log('same')
+      // result += 'same'
+      // result += '\n'
     }
-    result = result.slice(0, result.length - 1)
-    console.log(result)
+    // result = result.slice(0, result.length - 1)
+    // console.log(result)
     // for (var i = 0; i < n; i++) {
     //   console.log(result[i])
     // }
@@ -746,9 +749,13 @@
   </script>
   <script xtype="task20" id="ch0105/20">
     var h = Math.floor(Number(prompt('input h:')))
+    // 第1次落地高度
     var sum = 0
+    // 代表落地时经过的米数
     var sum_r = 0
+    // 代表落地反弹后经过的米数
     var rebound = h / 2
+    // 第1次落地反弹的高度
 
     for (var i = 1; i <= 10; i++) {
       sum = sum_r + h
@@ -763,12 +770,23 @@
 
     console.log(sum.toFixed(4))
     console.log((rebound * 2).toFixed(7))
+
+    // var h = 20
+    // var sum = 20
+
+    // for (var i = 1; i <= 10; i++) {
+    //   h /= 2
+    //   // 第i次落地的高度
+    //   sum += h * 2
+    //   // 第i次落地后经过的米数
+    // }
   </script>
   <script type="task21" id="ch0105/21">
     var n = Math.floor(Number(prompt('input n:')))
     var temp = 0
     while (n != 1) {
       temp = n
+      // 这种写法中, 必须先判断是否为奇数, 否则数字1会出现死循环
       if (n % 2 == 1) {
         n = 3 * n + 1
         console.log(temp + '*3+1=' + n)
@@ -783,7 +801,6 @@
     var m = 1
     var saving = 0
     var cash = 0
-    var total = 0
     var flag = false
     do {
       var n = Math.floor(Number(prompt('input n' + m + ':')))
@@ -819,16 +836,20 @@
     var high = 0
     var low = 0
     var count = 0
+    var output = 0
+    
     for (var i = 0; i < n; i++) {
       high = Math.floor(Number(prompt('input h:')))
       low = Math.floor(Number(prompt('input h:')))
-      if (high >= 90 && high <= 140 && low >= 60 && low <= 90)
+      if (high >= 90 && high <= 140 && low >= 60 && low <= 90){
         count++
+        output = output > count ? output : count
+      }
       else
         count = 0
     }
 
-    console.log(count)
+    console.log(output)
   </script>
   <script xtype="task25" id="ch0105/25">
     var seven = 0
@@ -1046,26 +1067,31 @@
     console.log(n)
   </script>
   <script xtype="task38" id="ch0105/38">
-    var n = Math.floor(Number(prompt('input n:')))
+    var m = Math.floor(Number(prompt('input m:')))
     var c = 0
     var result = ''
     var flag = 0
-    for (var i = n; i >= 0; i--) {
-      c = Math.floor(Number(prompt('input c' + i + ':')))
-      if (i == 0) {
-        result += 0
-        break;
-      } else {
-        c
+    var count = 0
+
+    while (m) {
+      var n = Math.floor(Number(prompt('input n:')))
+      for (var i = n; i >= 0; i--) {
+        c = Math.floor(Number(prompt('input c' + i + ':')))
+        if (n == 0) {
+          console.log(0)
+          break
+        } else if (i == 0)
+          break
         result += c * i + ' '
+        if (c)
+          flag = 1
       }
-      if (c)
-        flag++
+
+      if (flag)
+        console.log(result.slice(0, result.length - 1))
+      result = ''
+      m--
     }
-    if (flag == 0)
-      console.log(0)
-    else
-      console.log(result.slice(0, result.length - 1))
   </script>
   <script type="task39" id="ch0105/39">
     var n = Math.floor(Number(prompt('input n:')))
@@ -1143,7 +1169,7 @@
           continue
         }
         if (isFill == 0 && j < (x - 2))
-          fill = '\xa0'
+          fill = ' '
         else
           fill = ch
       }
