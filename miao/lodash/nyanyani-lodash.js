@@ -1,13 +1,22 @@
 // var nyanyani = {
-//   concat: function (origin, target) {
+//   concat: function () {
 //     let result = []
-//     for (let i = 0; i < ary.length; i++) {
-//       result.push(ary[i])
-//     }
 //     return result
 //   },
 // }
 var nyanyani = function () {
+  function compact(ary) {
+    let length = ary.length
+    if (!length)
+      return []
+    let result = []
+    for (let i = 0; i < length; i++) {
+      if (ary[i])
+        result.push(ary[i])
+    }
+    return result
+  };
+
   function concat() {
     let length = arguments.length
     if (!length)
@@ -19,8 +28,10 @@ var nyanyani = function () {
       }
     }
     return ary
-  }
+  };
+
   return {
+    compact,
     concat,
   }
 }();
