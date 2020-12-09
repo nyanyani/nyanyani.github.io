@@ -3,11 +3,6 @@
 //     let result = []
 //     return result
 //   },
-
-const {
-  isArray
-} = require("lodash");
-
 // }
 var nyanyani = function () {
   function chunk(ary, size) {
