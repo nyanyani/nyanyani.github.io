@@ -89,12 +89,10 @@ var nyanyani = function () {
     return result
   }
 
-  function dropRight(array, n) {
+  function dropRight(array, n = 1) {
     if (!array || !array.length || array.length < n)
       return []
     let length = array.length
-    if (n === undefined)
-      return array
     let result = []
     n = length - n
     for (let i = 0; i < length; i++) {
@@ -149,7 +147,7 @@ var nyanyani = function () {
     let result = []
     for (let i = 0; i < length; i++) {
       if (Array.isArray(array[i]))
-        result = result.concat(flatten(array[i]))
+        result = result.concat(array[i])
       else
         result.push(array[i])
     }
@@ -255,9 +253,7 @@ var nyanyani = function () {
     let right = length
     while (left < right) {
       let mid = left + ((right - left) >> 1)
-      if (array[mid] === value)
-        return mid
-      else if (array[mid] < value) {
+      if (array[mid] < value) {
         left = mid + 1
       } else
         right = mid
@@ -324,24 +320,21 @@ var nyanyani = function () {
     if (!array || !array.length)
       return undefined
     let length = array.length
+    max = array[0]
     if (typeof iteratee === 'string') {
-      var literal = iteratee
-      iteratee = (o, literal) => o[literal]
-      max = iteratee(array[0])
       for (let i = 1; i < length; i++) {
-        let value = iteratee(array[i], literal)
+        let value = array[i][iteratee]
         if (value === undefined)
           continue
         if (max[literal] < value)
           max = array[i]
       }
     } else if (typeof iteratee === 'function') {
-      max = iteratee(array[0])
       for (let i = 1; i < length; i++) {
         let value = iteratee(array[i])
         if (value === undefined)
           continue
-        else if (max !== undefined && iteratee(min) < value)
+        else if (max !== undefined && iteratee(max) < value)
           max = array[i]
       }
     } else
@@ -364,24 +357,21 @@ var nyanyani = function () {
     if (!array || !array.length)
       return undefined
     let length = array.length
+    min = array[0]
     if (typeof iteratee === 'string') {
-      var literal = iteratee
-      iteratee = (o, literal) => o[literal]
-      min = iteratee(array[0])
       for (let i = 1; i < length; i++) {
-        let value = iteratee(array[i], literal)
+        let value = array[i][iteratee]
         if (value === undefined)
           continue
-        else if (min !== undefined && min[literal] < value)
+        else if (min !== undefined && min[literal] > value)
           min = array[i]
       }
     } else if (typeof iteratee === 'function') {
       for (let i = 1; i < length; i++) {
-        min = iteratee(array[0])
         let value = iteratee(array[i])
         if (value === undefined)
           continue
-        else if (min !== undefined && iteratee(min) < value)
+        else if (min !== undefined && iteratee(min) > value)
           min = array[i]
       }
     } else
