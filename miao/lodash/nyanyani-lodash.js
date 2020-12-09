@@ -41,9 +41,12 @@ var nyanyani = function () {
       return []
     let ary = []
     for (let i = 0; i < length; i++) {
-      for (let j = 0; j < arguments[i].length; j++) {
-        ary.push(arguments[i][j])
-      }
+      if (!Array.isArray(arguments[i]))
+        ary.push(arguments[i])
+      else
+        for (let j = 0; j < arguments[i].length; j++) {
+          ary.push(arguments[i][j])
+        }
     }
     return ary
   }
@@ -326,7 +329,7 @@ var nyanyani = function () {
         let value = array[i][iteratee]
         if (value === undefined)
           continue
-        if (max[literal] < value)
+        if (max[iteratee] < value)
           max = array[i]
       }
     } else if (typeof iteratee === 'function') {
@@ -363,7 +366,7 @@ var nyanyani = function () {
         let value = array[i][iteratee]
         if (value === undefined)
           continue
-        else if (min !== undefined && min[literal] > value)
+        else if (min !== undefined && min[iteratee] > value)
           min = array[i]
       }
     } else if (typeof iteratee === 'function') {
